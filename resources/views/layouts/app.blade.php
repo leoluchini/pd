@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Laravel</title>
+    <title>Propio Marte</title>
 
     <!-- Fonts -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css" integrity="sha384-XdYbMnZ/QjLh6iI4ogqCTaIjrFk87ip+ekIjefZch0Y+PvJ8CDYtEs1ipDmPorQ+" crossorigin="anonymous">
@@ -39,7 +39,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="{{ url('/') }}">LOGO</a>
+              <a class="navbar-brand" href="{{ url('/') }}">PM</a>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
@@ -79,13 +79,14 @@
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
       <!-- Indicators -->
       <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class=""></li>
-        <li data-target="#myCarousel" data-slide-to="1" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1" class=""></li>
         <li data-target="#myCarousel" data-slide-to="2" class=""></li>
+        <li data-target="#myCarousel" data-slide-to="3" class=""></li>
       </ol>
       <div class="carousel-inner" role="listbox">
-        <div class="item">
-          <img class="first-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="First slide">
+        <div class="item active">
+          {{ HTML::image('images/MP-1.png') }}
           <div class="container">
             <div class="carousel-caption">
               <h1>Example headline.</h1>
@@ -93,8 +94,8 @@
             </div>
           </div>
         </div>
-        <div class="item active">
-          <img class="second-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Second slide">
+        <div class="item">
+          {{ HTML::image('images/MP-2.png') }}
           <div class="container">
             <div class="carousel-caption">
               <h1>Another example headline.</h1>
@@ -103,7 +104,16 @@
           </div>
         </div>
         <div class="item">
-          <img class="third-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Third slide">
+          {{ HTML::image('images/MP-3.png') }}
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>One more for good measure.</h1>
+              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          {{ HTML::image('images/MP-4.png') }}
           <div class="container">
             <div class="carousel-caption">
               <h1>One more for good measure.</h1>
