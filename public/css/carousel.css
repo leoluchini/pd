@@ -41,6 +41,7 @@ body {
 .carousel {
   height: 400px;
   margin-bottom: 60px;
+  margin-top: 70px;
 }
 /* Since positioning the image, we need to help out the caption */
 .carousel-caption {
@@ -98,9 +99,6 @@ body {
 
 @media (min-width: 768px) {
   /* Navbar positioning foo */
-  .navbar-wrapper {
-    margin-top: 20px;
-  }
   .navbar-wrapper .container {
     padding-right: 15px;
     padding-left: 15px;
@@ -111,8 +109,9 @@ body {
   }
 
   /* The navbar becomes detached from the top, so we round the corners */
-  .navbar-wrapper .navbar {
-    border-radius: 4px;
+  .navbar.navbar-default {
+    border-radius: 0px;
+    border-bottom: 20px solid #F7A600;
   }
 
   /* Bump up size of carousel content */
