@@ -13,8 +13,9 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-    {!! Html::style('css/carousel.css') !!}
     {!! Html::style('css/scrolling-nav.css') !!}
+    {!! Html::style('css/full-slider.css') !!}
+    {!! Html::style('css/carousel.css') !!}
     {!! Html::style('css/app.css') !!}
 
     <style>
@@ -38,7 +39,14 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand page-scroll" href="#page-top">PM</a>
+                <a class="navbar-brand page-scroll" href="#page-top">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            {{ HTML::image('images/pm.png', 'pm', array('height' => '30')) }}
+                            {{ HTML::image('images/propio-marte.png', 'propio marte', array('height' => '30')) }}
+                        </div>
+                    </div>
+                </a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -93,55 +101,7 @@
         </div>
         <!-- /.container -->
     </nav>
-    <!-- Carousel
-    ================================================== -->
-    <div id="myCarousel" class="carousel slide" data-ride="carousel">
-      <!-- Indicators -->
-      <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1" class=""></li>
-        <li data-target="#myCarousel" data-slide-to="2" class=""></li>
-        <li data-target="#myCarousel" data-slide-to="3" class=""></li>
-      </ol>
-      <div class="carousel-inner" role="listbox">
-        <div class="item active">
-          {{ HTML::image('images/MP-1.png') }}
-          <div class="container">
-            <div class="carousel-caption">
-              <h1>Example headline.</h1>
-              <p>Note: If you're viewing this page via a <code>file://</code> URL, the "next" and "previous" Glyphicon buttons on the left and right might not load/display properly due to web browser security rules.</p>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          {{ HTML::image('images/MP-2.png') }}
-          <div class="container">
-            <div class="carousel-caption">
-              <h1>Another example headline.</h1>
-              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          {{ HTML::image('images/MP-3.png') }}
-          <div class="container">
-            <div class="carousel-caption">
-              <h1>One more for good measure.</h1>
-              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          {{ HTML::image('images/MP-4.png') }}
-          <div class="container">
-            <div class="carousel-caption">
-              <h1>One more for good measure.</h1>
-              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div><!-- /.carousel -->
+    
     @yield('content')
 
     <!-- JavaScripts -->

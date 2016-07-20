@@ -1,25 +1,62 @@
 @extends('layouts.app')
 
 @section('content')
-    <!-- Intro Section -->
-    <section id="intro" class="intro-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h1>Scrolling Nav</h1>
-                    <p><strong>Usage Instructions:</strong> Make sure to include the <code>scrolling-nav.js</code>, <code>jquery.easing.min.js</code>, and <code>scrolling-nav.css</code> files. To make a link smooth scroll to another section on the page, give the link the <code>.page-scroll</code> class and set the link target to a corresponding ID on the page.</p>
-                    <a class="btn btn-default page-scroll" href="#about">Click Me to Scroll Down!</a>
-                </div>
+    <!-- Carousel
+    ================================================== -->
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1" class=""></li>
+        <li data-target="#myCarousel" data-slide-to="2" class=""></li>
+        <li data-target="#myCarousel" data-slide-to="3" class=""></li>
+      </ol>
+      <div class="carousel-inner" role="listbox">
+        <div class="item active">
+          {{ Html::image('images/MP-1.png') }}
+          <div class="container">
+            <div class="carousel-caption">
+                {{ HTML::image('images/pm.png', 'pm', array('height' => '80')) }}
+                <h1>Example headline.</h1>
             </div>
+          </div>
         </div>
-    </section>
+        <div class="item">
+          {{ Html::image('images/MP-2.png') }}
+          <div class="container">
+            <div class="carousel-caption">
+                {{ HTML::image('images/pm.png', 'pm', array('height' => '80')) }}
+              <h1>Another example headline.</h1>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          {{ Html::image('images/MP-3.png') }}
+          <div class="container">
+            <div class="carousel-caption">
+                {{ HTML::image('images/pm.png', 'pm', array('height' => '80')) }}
+                <h1>One more for good measure.</h1>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          {{ Html::image('images/MP-4.png') }}
+          <div class="container">
+            <div class="carousel-caption">
+                {{ HTML::image('images/pm.png', 'pm', array('height' => '80')) }}
+                <h1>One more for good measure.</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><!-- /.carousel -->
 
     <!-- About Section -->
     <section id="about" class="about-section">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1>About Section</h1>
+                    <h1>Quienes somos</h1>
                 </div>
             </div>
         </div>

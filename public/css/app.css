@@ -22,3 +22,44 @@
 #login-dp .form-group {
     margin-bottom: 10px;
 }
+.navbar-default {
+    border-bottom: 10px solid #F7A600;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #F7A600;
+}
+
+.about-section {
+    height: 100%;
+    padding-top: 80px;
+    background: #eee;
+}
+
+.statistics-section {
+    height: 100%;
+    padding-top: 80px;
+    text-align: center;
+    background: #f7f7f7;
+}
+
+.staff-section {
+    height: 100%;
+    padding-top: 80px;
+    text-align: center;
+    background: #F7A600;
+}
+
+.services-section {
+    height: 100%;
+    padding-top: 150px;
+    text-align: center;
+    background: #fff;
+}
+
+.contact-section {
+    height: 100%;
+    padding-top: 150px;
+    text-align: center;
+    background: #eee;
+}
