@@ -30,10 +30,34 @@ h1, h2, h3, h4, h5, h6 {
     color: #F7A600;
 }
 
+.panel-propio {
+    border: 10px solid #F7A600;
+}
+
+.newspaper {
+    -webkit-column-count: 2; /* Chrome, Safari, Opera */
+    -moz-column-count: 2; /* Firefox */
+    column-count: 2;
+}
+.logo{
+    margin-left: 5px;
+}
+
+.footer{
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    background:#000;
+    color: #fff;
+    border-top: 2px solid #F7A600;
+}
+.footer-img{
+    height: 20px;
+    margin-right: 10px;
+}
 .about-section {
     height: 100%;
-    padding-top: 80px;
-    background: #eee;
+    padding-top: 100px;
 }
 
 .statistics-section {
@@ -57,9 +81,15 @@ h1, h2, h3, h4, h5, h6 {
     background: #fff;
 }
 
-.contact-section {
+.clients-section {
     height: 100%;
     padding-top: 150px;
     text-align: center;
-    background: #eee;
+    background: #fff;
+}
+
+.contact-section {
+    height: 60%;
+    padding-top: 150px;
+    background: #000;
 }

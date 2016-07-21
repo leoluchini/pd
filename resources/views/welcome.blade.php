@@ -55,8 +55,26 @@
     <section id="about" class="about-section">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12">
+                <div class="col-lg-8">
                     <h1>Quienes somos</h1>
+                    <p class="newspaper text-justify">Somos una empresa joven que brinda servicios profesionales de excelencia, buscando siempre satisfacer de la mejor forma las necesidades de nuestros clientes. Nos destacamos en el análisis y evaluación global, sectorial y microeconómica. Brindamos información y proyecciones sobre la situación económica mundial, nacional y local, definiendo los escenarios alternativos posibles. Proporcionamos asesoramiento en proyectos de inversión, apoyados en un vasto conocimiento sobre las herramientas de financiamiento disponibles para adoptar las mejores decisiones para su empresa.</p>
+                </div>
+                <div class="col-lg-4">
+                    <div class="panel panel-propio">
+                      <div class="panel-body">
+                        <h2>Nuestros Valores</h2>
+                        <ul class="list-unstyled">
+                          <li>Compromiso</li>
+                          <li>Conocimiento</li>
+                          <li>Excelencia</li>
+                          <li>Experiencia</li>
+                          <li>Creatividad e innovación</li>
+                          <li>Eficacia y resultados</li>
+                          <li>Eficacia y resultados</li>
+                          <li>Confianza y objetividad</li>
+                        </ul>
+                      </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -95,6 +113,17 @@
         </div>
     </section>
 
+    <!-- Clients Section -->
+    <section id="clients" class="clients-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1>Clients</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Contact Section -->
     <section id="contact" class="contact-section">
         <div class="container">
@@ -103,6 +132,14 @@
                     <h1>Contact Section</h1>
                 </div>
             </div>
+        </div>
+    </section>
+    <section class="footer">
+        <div class="container-fluid">
+            <p>
+                {{ Html::image('images/footer.png', 'footer', ['class' => 'footer-img']) }}
+                2016 | Todos los derechos reservados 
+            </p>
         </div>
     </section>
 @endsection

@@ -43,7 +43,7 @@
                     <div class="row">
                         <div class="col-xs-12">
                             {{ HTML::image('images/pm.png', 'pm', array('height' => '30')) }}
-                            {{ HTML::image('images/propio-marte.png', 'propio marte', array('class' => "logo",'height' => '30')) }}
+                            {{ HTML::image('images/propio-marte.png', 'propio marte', array('class' => "logo",'height' => '20')) }}
                         </div>
                     </div>
                 </a>
