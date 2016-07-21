@@ -16,7 +16,7 @@
           {{ Html::image('images/MP-1.png') }}
           <div class="container">
             <div class="carousel-caption">
-                {{ HTML::image('images/pm.png', 'pm', array('height' => '80')) }}
+                {{ HTML::image('images/pm-white.png', 'pm', array('height' => '80')) }}
                 <h1>Example headline.</h1>
             </div>
           </div>
@@ -25,7 +25,7 @@
           {{ Html::image('images/MP-2.png') }}
           <div class="container">
             <div class="carousel-caption">
-                {{ HTML::image('images/pm.png', 'pm', array('height' => '80')) }}
+                {{ HTML::image('images/pm-white.png', 'pm', array('height' => '80')) }}
               <h1>Another example headline.</h1>
             </div>
           </div>
@@ -34,7 +34,7 @@
           {{ Html::image('images/MP-3.png') }}
           <div class="container">
             <div class="carousel-caption">
-                {{ HTML::image('images/pm.png', 'pm', array('height' => '80')) }}
+                {{ HTML::image('images/pm-white.png', 'pm', array('height' => '80')) }}
                 <h1>One more for good measure.</h1>
             </div>
           </div>
@@ -43,7 +43,7 @@
           {{ Html::image('images/MP-4.png') }}
           <div class="container">
             <div class="carousel-caption">
-                {{ HTML::image('images/pm.png', 'pm', array('height' => '80')) }}
+                {{ HTML::image('images/pm-white.png', 'pm', array('height' => '80')) }}
                 <h1>One more for good measure.</h1>
             </div>
           </div>
