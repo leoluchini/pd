@@ -106,8 +106,43 @@
     <section id="staff" class="staff-section">
         <div class="container">
             <div class="row">
+                <div class="col-lg-12" style="border-bottom: 2px solid">
+                    <h1 class="white">Equipo</h1>
+                    <div class="col-md-4">
+                      <center>
+                        {{ Html::image('images/equipo/pm1.jpg', '1', ['class'=>"img-circle", "height" => 150]) }}
+                        <p>Sebastián Alvarez Hayes</p>
+                        <ul class="list-unstyled white">
+                          <li>Licenciado en economía.</li>
+                          <li>Mercado de trabajo y análisis de datos</li>
+                        </ul>
+                      </center>
+                    </div>
+                    <div class="col-md-4">
+                      <center>
+                        {{ Html::image('images/equipo/pm2.jpg', '2', ['class'=>"img-circle", "height" => 150]) }}
+                        <p>Martín Pollera</p>
+                        <ul class="list-unstyled white">
+                          <li>Licenciado en economía.</li>
+                          <li>Cadena de valor, sectores productivos, Financiamiento PyME</li>
+                        </ul>
+                      </center>
+                    </div>
+                    <div class="col-md-4">
+                      <center>
+                        {{ Html::image('images/equipo/pm3.jpg', '3', ['class'=>"img-circle", "height" => 150]) }}
+                        <p>Sebastián Lucero</p>
+                        <ul class="list-unstyled white">
+                          <li>Licenciado en economía.</li>
+                          <li>Comercio exterior y Panorama internacional</li>
+                        </ul>
+                      </center>
+                    </div>
+                </div>
                 <div class="col-lg-12">
-                    <h1>Staff</h1>
+                  <div class="col-md-4"></div>
+                  <div class="col-md-4"></div>
+                  <div class="col-md-4"></div>
                 </div>
             </div>
         </div>
