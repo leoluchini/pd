@@ -62,10 +62,10 @@
                             <a class="page-scroll" href="#about">Quienes Somos</a>
                         </li>
                         <li>
-                            <a class="page-scroll" href="#statistics">Estadística</a>
+                            <a class="page-scroll" href="#services">Servicios</a>
                         </li>
                         <li>
-                            <a class="page-scroll" href="#services">Servicios</a>
+                            <a class="page-scroll" href="#indicators">Indicadores</a>
                         </li>
                         <li>
                             <a class="page-scroll" href="#staff">Staff</a>

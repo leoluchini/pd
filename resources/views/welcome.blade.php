@@ -57,7 +57,7 @@
             <div class="row">
                 <div class="col-lg-8">
                     <h1>Quienes somos</h1>
-                    <p class="newspaper text-justify">Somos una empresa joven que brinda servicios profesionales de excelencia, buscando siempre satisfacer de la mejor forma las necesidades de nuestros clientes. Nos destacamos en el análisis y evaluación global, sectorial y microeconómica. Brindamos información y proyecciones sobre la situación económica mundial, nacional y local, definiendo los escenarios alternativos posibles. Proporcionamos asesoramiento en proyectos de inversión, apoyados en un vasto conocimiento sobre las herramientas de financiamiento disponibles para adoptar las mejores decisiones para su empresa.</p>
+                    <p class="newspaper text-justify">Somos una empresa joven que brinda servicios profesionales de excelencia, buscando siempre satisfacer de la mejor forma las necesidades de nuestros clientes. <b>Nos destacamos en el análisis y evaluación</b> global, sectorial y microeconómica. Brindamos <b>información y proyecciones</b> sobre la situación económica mundial, nacional y local, definiendo los escenarios alternativos posibles. Proporcionamos asesoramiento en <b>proyectos de inversión</b>, apoyados en un vasto conocimiento sobre las herramientas de financiamiento disponibles para adoptar <b>las mejores decisiones para su empresa</b>.</p>
                 </div>
                 <div class="col-lg-4">
                     <div class="panel panel-propio">
@@ -80,16 +80,6 @@
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="statistics" class="statistics-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h1>Statistics Section</h1>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- Services Section -->
     <section id="services" class="services-section">
@@ -97,6 +87,17 @@
             <div class="row">
                 <div class="col-lg-12">
                     <h1>Services Section</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Indicators Section -->
+    <section id="indicators" class="statistics-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1>Indicators Section</h1>
                 </div>
             </div>
         </div>
@@ -164,7 +165,31 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1>Contact Section</h1>
+                <div class="col-md-6"></div>
+                  <div class="col-md-2">
+                    <h4>Secciones</h4>
+                    <div class="page-footer">
+                      <a class="page-scroll" href="#page-top"></a>
+                      <a class="page-scroll" href="#about">Quienes Somos</a>
+                      <a class="page-scroll" href="#services">Servicios</a>
+                      <a class="page-scroll" href="#indicators">Indicadores</a>
+                      <a class="page-scroll" href="#staff">Staff</a>
+                      <a class="page-scroll" href="#clients">Nuestros Clientes</a>
+                    </div>
+                  </div>
+                  <div class="col-md-2">
+                    <h4>Seguinos</h4>
+                      <a href="#" class="social facebook"><i class="fa fa-btn fa-facebook btn-social"></i></a>
+                      <a href="#" class="social skype"><i class="fa fa-btn fa-skype btn-social"></i></a>
+                      <a href="#" class="social linkedin"><i class="fa fa-btn fa-linkedin btn-social"></i></a>
+                      <a href="#" class="social twitter"><i class="fa fa-btn fa-twitter btn-social"></i></a>
+                  </div>
+                  <div class="col-md-2">
+                    <h4>Contacto</h4>
+                      <p class="white">7 n°1554 e/516 y 517</p>
+                      <p class="white">424-1843</p>
+                      <p class="white">contacto@propiomarte.com</p>
+                  </div>
                 </div>
             </div>
         </div>
