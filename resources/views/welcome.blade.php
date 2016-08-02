@@ -81,6 +81,7 @@
     </section>
 
 
+
     <!-- Services Section -->
     <section id="services" class="services-section">
         <div class="container">
@@ -92,13 +93,61 @@
         </div>
     </section>
     
-    <!-- Indicators Section -->
-    <section id="indicators" class="statistics-section">
+    <!-- Plan Section -->
+    <section id="plan" class="plan-section">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1>Indicators Section</h1>
-                </div>
+                    <h1>Plan crecer</h1>
+                    <p class="black"><b>Seleccione una opción de cada grupo</b> para saber cuál es el <b>plan de financiaciamiento</b> que mejor se adapta a su empresa</p>
+                    
+                <div id="accordion">
+                  <div class="panel">
+                    <div class="header">
+                      #1
+                    </div>
+                    <div class="panelContent"> 
+                      <h4>Yo soy</h4>
+                       <div class="list-group list-plan">
+                        <a href="#" class="list-group-item active">Emprendedor</a>
+                        <a href="#" class="list-group-item">PyME</a>
+                        <a href="#" class="list-group-item">Empresa grande</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="panel">
+                    <div class="header">
+                      #2
+                    </div>
+                    <div class="panelContent p2">
+                      <h4>Necesito financiamiento para</h4>
+                      <div class="list-group list-plan">
+                        <a href="#" class="list-group-item active">Capacitación</a>
+                        <a href="#" class="list-group-item">capital de trabajo</a>
+                        <a href="#" class="list-group-item">servicios profesionales</a>
+                        <a href="#" class="list-group-item">Innovación</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="panel">
+                    <div class="header">
+                      #3
+                    </div>
+                    <div class="panelContent">
+                      <h4>Quiero financiamiento para</h4>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. In iaculis volutpat quam, non suscipit arcu accumsan at. Aliquam pellentesque.
+                    </div>
+                  </div>
+                  <div class="panel">
+                    <div class="header">
+                      #4
+                    </div>
+                    <div class="panelContent p4"> <strong>Section 4 Header</strong><br>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. In iaculis volutpat quam, non suscipit arcu accumsan at. Aliquam pellentesque.
+                    </div>
+                  </div>
+              </div>
+              </div>
             </div>
         </div>
     </section>
@@ -149,8 +198,26 @@
         </div>
     </section>
 
+    <!-- Indicators Section -->
+    <section id="indicators" class="middle-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1>Indicadores</h1>
+                    @foreach(App\Indicator::all() as $indicator)
+                      <div class="col-md-3 indicator">
+                        <p>{!! $indicator->name!!}</p>
+                        <h3 class="black"><strong>{!! $indicator->value!!}</strong></h3>
+                        <h5 class="black"><strong>en {!! $indicator->year!!}</strong></h5>
+                      </div>
+                    @endforeach
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Clients Section -->
-    <section id="clients" class="clients-section">
+    <section id="clients" class="middle-section">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -172,8 +239,8 @@
                       <a class="page-scroll" href="#page-top"></a>
                       <a class="page-scroll" href="#about">Quienes Somos</a>
                       <a class="page-scroll" href="#services">Servicios</a>
-                      <a class="page-scroll" href="#indicators">Indicadores</a>
                       <a class="page-scroll" href="#staff">Staff</a>
+                      <a class="page-scroll" href="#indicators">Indicadores</a>
                       <a class="page-scroll" href="#clients">Nuestros Clientes</a>
                     </div>
                   </div>

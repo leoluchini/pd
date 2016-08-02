@@ -69,8 +69,13 @@ p.newspaper:first-letter {
     height: 20px;
     margin-right: 10px;
 }
+
 .white{
     color: #fff;
+}
+
+.black{
+    color: #000;
 }
 .about-section {
     height: 100%;
@@ -78,14 +83,22 @@ p.newspaper:first-letter {
 }
 
 .statistics-section {
-    height: 100%;
+    min-height: 100%;
     padding-top: 80px;
-    text-align: center;
     background: #f7f7f7;
 }
 
+.plan-section {
+    min-height: 100%;
+    padding-top: 80px; 
+}
+.col-plan{
+    min-height: 400px;
+    border-left: 5px solid #e7e7e7;
+}
+
 .staff-section {
-    height: 100%;
+    min-height: 100%;
     padding-top: 80px;
     background: #F7A600; 
 }
@@ -97,10 +110,9 @@ p.newspaper:first-letter {
     background: #fff;
 }
 
-.clients-section {
-    height: 100%;
-    padding-top: 150px;
-    text-align: center;
+.middle-section {
+    min-height: 50%;
+    padding-top: 80px;
     background: #fff;
 }
 
@@ -150,4 +162,25 @@ a.linkedin:hover{
 }
 a.skype:hover{
     background-color: #12A5F4;
+}
+.indicator{
+    min-height: 130px;
+    border-left: 3px solid #F7A600;
+    padding-left: 10px;
+}
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) { ... }
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) { ... }
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .list-plan{
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
 }

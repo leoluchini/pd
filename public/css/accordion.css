@@ -1,0 +1,42 @@
+#accordion {
+    list-style:none;
+    margin-bottom: 30px;
+    padding:0;
+    height:370px;
+    width:980px;
+    border-top:2px solid #000000;
+    border-bottom:2px solid #000000;
+    overflow:hidden;
+}
+
+#accordion .panel {
+    float:left;
+    display:block;
+    height:370px;
+    width:44px;
+    overflow:hidden;
+    color:#666666;
+    text-decoration:none;
+    font-size:16px;
+    line-height:1.5em
+}
+#accordion .panel.active {
+    width:848px
+}
+.panelContent {
+    padding:15px 15px 15px 55px;
+    height:240px;
+    width:778px;
+}
+.header {
+    width:42px;
+    height:100%;
+    float:left;
+    background: #f7f7f7;
+    border-right:2px solid #ffffff;
+    cursor:pointer
+}
+
+.last {
+    border:none
+}

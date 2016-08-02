@@ -17,6 +17,7 @@
     {!! Html::style('css/scrolling-nav.css') !!}
     {!! Html::style('css/full-slider.css') !!}
     {!! Html::style('css/carousel.css') !!}
+    {!! Html::style('css/accordion.css') !!}
     {!! Html::style('css/app.css') !!}
 
     <style>
@@ -65,10 +66,10 @@
                             <a class="page-scroll" href="#services">Servicios</a>
                         </li>
                         <li>
-                            <a class="page-scroll" href="#indicators">Indicadores</a>
+                            <a class="page-scroll" href="#staff">Staff</a>
                         </li>
                         <li>
-                            <a class="page-scroll" href="#staff">Staff</a>
+                            <a class="page-scroll" href="#indicators">Indicadores</a>
                         </li>
                         <li>
                             <a class="page-scroll" href="#clients">Nuestros Clientes</a>
@@ -104,7 +105,10 @@
     </nav>
     
     @yield('content')
-
+    
+    <div class="container-fluid">
+        @yield('content-backend')
+    </div>
     <!-- JavaScripts -->
 
     <!-- jQuery -->
@@ -116,5 +120,6 @@
     <!-- Scrolling Nav JavaScript -->
     {!! Html::script('js/jquery.easing.min.js') !!}
     {!! Html::script('js/scrolling-nav.js') !!}
+    {!! Html::script('js/accordion.js') !!}
   </body>
 </html>

@@ -18,6 +18,7 @@ Route::get('/', function () {
 
 Route::auth();
 
+	Route::resource('indicadores', 'IndicatorController');
 Route::group(['middleware' => 'auth'], function () {
 	Route::get('/home', 'HomeController@index');
 });
