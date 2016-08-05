@@ -12,4 +12,12 @@ $(function(){
 			activePanel = this;
 		 };
     });
+
+    $(".list-group-item").on('click',function(event){
+    	event.stopPropagation();
+    	event.preventDefault();
+    	$(this).parent().find('.active').removeClass('active');
+    	$(this).addClass('active');
+    	next = $('.panel.active').next().trigger('click'); 
+    })
 });

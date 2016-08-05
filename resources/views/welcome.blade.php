@@ -109,9 +109,9 @@
                     <div class="panelContent"> 
                       <h4>Yo soy</h4>
                        <div class="list-group list-plan">
-                        <a href="#" class="list-group-item active">Emprendedor</a>
-                        <a href="#" class="list-group-item">PyME</a>
-                        <a href="#" class="list-group-item">Empresa grande</a>
+                        @foreach(App\Entity::all() as $entity)
+                          <a href="{{ route('entities.topics.index', $entity->id) }}" class="list-group-item">{{ $entity->name }}</a>
+                        @endforeach
                       </div>
                     </div>
                   </div>
@@ -122,7 +122,7 @@
                     <div class="panelContent p2">
                       <h4>Necesito financiamiento para</h4>
                       <div class="list-group list-plan">
-                        <a href="#" class="list-group-item active">Capacitación</a>
+                        <a href="#" class="list-group-item">Capacitación</a>
                         <a href="#" class="list-group-item">capital de trabajo</a>
                         <a href="#" class="list-group-item">servicios profesionales</a>
                         <a href="#" class="list-group-item">Innovación</a>
