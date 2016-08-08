@@ -121,6 +121,9 @@
                     </div>
                     <div class="panelContent">
                       <h4>Necesito financiamiento para</h4>
+                      <div class="loading hide">
+                        {{ HTML::image('images/ajax-loader.gif') }}
+                      </div>
                       <div class="list-group list-plan">
                       </div>
                     </div>
@@ -131,6 +134,9 @@
                     </div>
                     <div class="panelContent">
                       <h4>Quiero financiamiento para</h4>
+                      <div class="loading hide">
+                        {{ HTML::image('images/ajax-loader.gif') }}
+                      </div>
                       <div class="list-group list-plan">
                       </div>
                     </div>

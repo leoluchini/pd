@@ -25,12 +25,14 @@ $(function(){
         }
         $(".breadcrumb").append('<li id="'+panel_id+'"><a class="breadcrumb-link" href="#'+panel_id+'">'+$(this).html()+'</a></li>');
         next = $('.panel-accordion.active').next().trigger('click'); 
+        next.find('.loading').removeClass('hide');
         $.ajax({
             url: $(this).attr('href'),
             success: function(data){
                 $(next).find('.list-plan').html(data.html);
             }
         })
+        next.find('.loading').addClass('hide');
     })
 
     $("body").on('click',".breadcrumb-link", function(event){
