@@ -20,6 +20,7 @@ Route::auth();
 
 	Route::resource('indicadores', 'IndicatorController');
 	Route::resource('entities.topics', 'EntityTopicController');
+	Route::resource('entities.topics.items', 'EntityTopicItemController');
 Route::group(['middleware' => 'auth'], function () {
 	Route::get('/home', 'HomeController@index');
 });

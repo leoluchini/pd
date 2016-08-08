@@ -7,21 +7,22 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Entity;
 
-class EntityTopicController extends Controller
+class EntityTopicItemController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(Request $request, $entityId)
+    public function index(Request $request, $entityId, $topicId)
     {
         $entity = Entity::find($entityId);
-        $topics = $entity->topics;
+        $topic = $entity->topics()->where('id', $topicId)->first();
+
         if($request->ajax()){
-            return response()->json(array('html' => view('topics.topics', ['topics' => $topics, 'entity' => $entity ])->render()));
+            return response()->json(array('html' => view('items.items', ['topic' => $topic, 'entity' => $entity ])->render()));
         }else{
-            return view('topics.index', ['topics' => $topics ]);
+            return view('item.index', ['topic' => $topic ]);
         }
     }
 
@@ -52,9 +53,14 @@ class EntityTopicController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Request $request, $entityId, $topicId, $id)
     {
-        //
+        $item = Entity::find($entityId)->topics()->where('id', $topicId)->first()->items()->where('id', $id)->first();
+        if($request->ajax()){
+            return response()->json(array('html' => view('items.show', ['item' => $item ])->render()));
+        }else{
+            return view('item.index', ['topic' => $topic ]);
+        }
     }
 
     /**

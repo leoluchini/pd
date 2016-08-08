@@ -100,9 +100,10 @@
                 <div class="col-lg-12">
                     <h1>Plan crecer</h1>
                     <p class="black"><b>Seleccione una opción de cada grupo</b> para saber cuál es el <b>plan de financiaciamiento</b> que mejor se adapta a su empresa</p>
-                    
+                    <ol class="breadcrumb">
+                    </ol>
                 <div id="accordion">
-                  <div class="panel">
+                  <div id="panel-accordion-1" class="panel-accordion">
                     <div class="header">
                       #1
                     </div>
@@ -115,35 +116,33 @@
                       </div>
                     </div>
                   </div>
-                  <div class="panel">
+                  <div  id="panel-accordion-2" class="panel-accordion">
                     <div class="header">
                       #2
                     </div>
-                    <div class="panelContent p2">
+                    <div class="panelContent">
                       <h4>Necesito financiamiento para</h4>
                       <div class="list-group list-plan">
-                        <a href="#" class="list-group-item">Capacitación</a>
-                        <a href="#" class="list-group-item">capital de trabajo</a>
-                        <a href="#" class="list-group-item">servicios profesionales</a>
-                        <a href="#" class="list-group-item">Innovación</a>
                       </div>
                     </div>
                   </div>
-                  <div class="panel">
+                  <div  id="panel-accordion-3" class="panel-accordion">
                     <div class="header">
                       #3
                     </div>
                     <div class="panelContent">
                       <h4>Quiero financiamiento para</h4>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. In iaculis volutpat quam, non suscipit arcu accumsan at. Aliquam pellentesque.
+                      <div class="list-group list-plan">
+                      </div>
                     </div>
                   </div>
-                  <div class="panel">
+                  <div class="panel-accordion">
                     <div class="header">
                       #4
                     </div>
-                    <div class="panelContent p4"> <strong>Section 4 Header</strong><br>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. In iaculis volutpat quam, non suscipit arcu accumsan at. Aliquam pellentesque.
+                    <div class="panelContent">
+                      <div class="list-plan">
+                      </div>
                     </div>
                   </div>
               </div>

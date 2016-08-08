@@ -3,13 +3,13 @@
     margin-bottom: 30px;
     padding:0;
     height:370px;
-    width:980px;
+    width: 100%;
     border-top:2px solid #000000;
     border-bottom:2px solid #000000;
     overflow:hidden;
 }
 
-#accordion .panel {
+#accordion .panel-accordion {
     float:left;
     display:block;
     height:370px;
@@ -20,7 +20,7 @@
     font-size:16px;
     line-height:1.5em
 }
-#accordion .panel.active {
+#accordion .panel-accordion.active {
     width:848px
 }
 .panelContent {
