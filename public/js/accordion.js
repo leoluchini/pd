@@ -18,7 +18,12 @@ $(function(){
     	event.preventDefault();
     	$(this).parent().find('.active').removeClass('active');
     	$(this).addClass('active');
-        $(".breadcrumb").append('<li><a class="breadcrumb-link" href="#'+$(this).closest(".panel-accordion").attr('id')+'">'+$(this).html()+'</a></li>');
+        panel_id = $(this).closest(".panel-accordion").attr('id');
+        if($('.breadcrumb').has('#'+panel_id).length){
+            $('.breadcrumb #'+panel_id).nextAll().remove();
+            $('.breadcrumb #'+panel_id).remove();
+        }
+        $(".breadcrumb").append('<li id="'+panel_id+'"><a class="breadcrumb-link" href="#'+panel_id+'">'+$(this).html()+'</a></li>');
         next = $('.panel-accordion.active').next().trigger('click'); 
         $.ajax({
             url: $(this).attr('href'),

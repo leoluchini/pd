@@ -100,8 +100,7 @@
                 <div class="col-lg-12">
                     <h1>Plan crecer</h1>
                     <p class="black"><b>Seleccione una opción de cada grupo</b> para saber cuál es el <b>plan de financiaciamiento</b> que mejor se adapta a su empresa</p>
-                    <ol class="breadcrumb">
-                    </ol>
+                    <ol class="breadcrumb"></ol>
                 <div id="accordion">
                   <div id="panel-accordion-1" class="panel-accordion">
                     <div class="header">
