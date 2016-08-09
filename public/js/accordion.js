@@ -19,11 +19,11 @@ $(function(){
     	$(this).parent().find('.active').removeClass('active');
     	$(this).addClass('active');
         panel_id = $(this).closest(".panel-accordion").attr('id');
-        if($('.breadcrumb').has('#'+panel_id).length){
-            $('.breadcrumb #'+panel_id).nextAll().remove();
-            $('.breadcrumb #'+panel_id).remove();
+        if($('.breadcrumb').has('#link-'+panel_id).length){
+            $('.breadcrumb #link-'+panel_id).nextAll().remove();
+            $('.breadcrumb #link-'+panel_id).remove();
         }
-        $(".breadcrumb").append('<li id="'+panel_id+'"><a class="breadcrumb-link" href="#'+panel_id+'">'+$(this).html()+'</a></li>');
+        $(".breadcrumb").append('<li id="link-'+panel_id+'"><a class="breadcrumb-link" href="#'+panel_id+'">'+$(this).html()+'</a></li>');
         next = $('.panel-accordion.active').next().trigger('click'); 
         next.find('.loading').removeClass('hide');
         $.ajax({
