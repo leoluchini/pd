@@ -113,7 +113,7 @@ p.newspaper:first-letter {
 }
 
 .contact-section {
-    height: 60%;
+    min-height: 60%;
     padding-top: 80px;
     background: #000;
 }

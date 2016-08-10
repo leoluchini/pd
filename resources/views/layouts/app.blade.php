@@ -66,6 +66,9 @@
                             <a class="page-scroll" href="#services">Servicios</a>
                         </li>
                         <li>
+                            <a class="page-scroll" href="#plan">Plan crecer</a>
+                        </li>
+                        <li>
                             <a class="page-scroll" href="#staff">Staff</a>
                         </li>
                         <li>

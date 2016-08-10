@@ -273,6 +273,7 @@
                       <a class="page-scroll" href="#page-top"></a>
                       <a class="page-scroll" href="#about">Quienes Somos</a>
                       <a class="page-scroll" href="#services">Servicios</a>
+                      <a class="page-scroll" href="#plan">Plan crecer</a>
                       <a class="page-scroll" href="#staff">Staff</a>
                       <a class="page-scroll" href="#indicators">Indicadores</a>
                       <a class="page-scroll" href="#clients">Nuestros Clientes</a>
