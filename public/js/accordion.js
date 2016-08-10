@@ -24,15 +24,17 @@ $(function(){
             $('.breadcrumb #link-'+panel_id).remove();
         }
         $(".breadcrumb").append('<li id="link-'+panel_id+'"><a class="breadcrumb-link" href="#'+panel_id+'">'+$(this).html()+'</a></li>');
-        next = $('.panel-accordion.active').next().trigger('click'); 
+        next = $('.panel-accordion.active').next();
         next.find('.loading').removeClass('hide');
+        $(next).find('.list-plan').html('');
+        next.trigger('click'); 
         $.ajax({
             url: $(this).attr('href'),
             success: function(data){
                 $(next).find('.list-plan').html(data.html);
+                $(next).find('.loading').addClass('hide');
             }
         })
-        next.find('.loading').addClass('hide');
     })
 
     $("body").on('click',".breadcrumb-link", function(event){

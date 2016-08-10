@@ -10,6 +10,7 @@
         <li data-target="#myCarousel" data-slide-to="1" class=""></li>
         <li data-target="#myCarousel" data-slide-to="2" class=""></li>
         <li data-target="#myCarousel" data-slide-to="3" class=""></li>
+        <li data-target="#myCarousel" data-slide-to="4" class=""></li>
       </ol>
       <div class="carousel-inner" role="listbox">
         <div class="item active">
@@ -45,6 +46,14 @@
             <div class="carousel-caption">
                 {{ HTML::image('images/pm-white.png', 'pm', array('height' => '80')) }}
                 <h1>One more for good measure.</h1>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          {{ Html::image('images/MP-5.png') }}
+          <div class="container">
+            <div class="carousel-caption">
+                {{ HTML::image('images/pm-white.png', 'pm', array('height' => '80')) }}
             </div>
           </div>
         </div>
