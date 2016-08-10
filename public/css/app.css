@@ -105,9 +105,15 @@ p.newspaper:first-letter {
 
 .services-section {
     height: 100%;
-    padding-top: 150px;
-    text-align: center;
-    background: #fff;
+    padding-top: 60px;
+}
+.item-service{ 
+    min-height: 315px;
+    position: relative;
+}
+
+.item-service hr {
+    border-top: 3px solid #F7A600;
 }
 
 .middle-section {

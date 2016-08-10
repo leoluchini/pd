@@ -96,7 +96,43 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1>Services Section</h1>
+                    <h1><strong>Servicios</strong></h1>
+                </div>
+                <div class="col-lg-4 item-service">
+                  {!! Html::image('images/servicios/realidad-productiva.png','realidad productiva', ['class' => 'img-responsive'])!!}
+                  <h3 class="black">Realidad Productiva</h3>
+                  <p>Diagnóstico mensual sobre el desempeño de la economía real.</p>
+                  <hr>
+                </div>
+                <div class="col-lg-4 item-service">
+                  {!! Html::image('images/servicios/radares.png', 'radares', ['class' => 'img-responsive'])!!}
+                  <h3 class="black">Radares</h3>
+                  <p>Reportes integrados para conocer la economía internacional, el desempeño industrial, el sector financiero y el panorama fiscal.</p>
+                  <hr>
+                </div>
+                <div class="col-lg-4 item-service">
+                  {!! Html::image('images/servicios/proyeccion.png','proyecciones económicas', ['class' => 'img-responsive'])!!}
+                  <h3 class="black">Proyecciones económicas</h3>
+                  <p>Estimaciones sobre el desempeño futuro de las principales variables macroeconómicas.</p>
+                  <hr>
+                </div>
+                <div class="col-lg-4 item-service">
+                  {!! Html::image('images/servicios/inver-pyme.png','INVER PYME', ['class' => 'img-responsive'])!!}
+                  <h3 class="black">INVER-PYME</h3>
+                  <p>Informe ejecutivo sobre el desempeño del Índice de Perspectivas de Inversión Productiva (IPIP) y alternativas de financiamiento para las inversiones de tu PyME.</p>
+                  <hr>
+                </div>
+                <div class="col-lg-4 item-service">
+                  {!! Html::image('images/servicios/el-diario-del-lunes.png', 'El diario del lunes', ['class' => 'img-responsive'])!!}
+                  <h3 class="black">El Diario del Lunes</h3>
+                  <p>Resumen semanal de las noticias más destacadas en materia económica.</p>
+                  <hr>
+                </div>
+                <div class="col-lg-4 item-service">
+                  {!! Html::image('images/servicios/propio-pyme.png','PROPIO PyME', ['class' => 'img-responsive'])!!}
+                  <h3 class="black">PROPIO PyME</h3>
+                  <p>Asesoramiento económico-financiero personalizado para que tu empresa pueda continuar creciendo.</p>
+                  <hr>
                 </div>
             </div>
         </div>
