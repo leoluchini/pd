@@ -61,29 +61,14 @@
     </div><!-- /.carousel -->
 
     <!-- About Section -->
-    <section id="about" class="about-section">
+    <section id="about" class="middle-section">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8">
-                    <h1>Quienes somos</h1>
+                    <h1 class="tittle-section"><strong>Quienes somos</strong></h1>
                     <p class="newspaper text-justify">Somos una empresa joven que brinda servicios profesionales de excelencia, buscando siempre satisfacer de la mejor forma las necesidades de nuestros clientes. <b>Nos destacamos en el análisis y evaluación</b> global, sectorial y microeconómica. Brindamos <b>información y proyecciones</b> sobre la situación económica mundial, nacional y local, definiendo los escenarios alternativos posibles. Proporcionamos asesoramiento en <b>proyectos de inversión</b>, apoyados en un vasto conocimiento sobre las herramientas de financiamiento disponibles para adoptar <b>las mejores decisiones para su empresa</b>.</p>
                 </div>
                 <div class="col-lg-4">
-                    <div class="panel panel-propio">
-                      <div class="panel-body">
-                        <h2>Nuestros Valores</h2>
-                        <ul class="list-unstyled">
-                          <li>Compromiso</li>
-                          <li>Conocimiento</li>
-                          <li>Excelencia</li>
-                          <li>Experiencia</li>
-                          <li>Creatividad e innovación</li>
-                          <li>Eficacia y resultados</li>
-                          <li>Eficacia y resultados</li>
-                          <li>Confianza y objetividad</li>
-                        </ul>
-                      </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -92,11 +77,11 @@
 
 
     <!-- Services Section -->
-    <section id="services" class="services-section">
+    <section id="services" class="full-section">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1><strong>Servicios</strong></h1>
+                    <h1 class="tittle-section"><strong>Servicios</strong></h1>
                 </div>
                 <div class="col-lg-4 item-service">
                   {!! Html::image('images/servicios/realidad-productiva.png','realidad productiva', ['class' => 'img-responsive'])!!}
@@ -139,11 +124,11 @@
     </section>
     
     <!-- Plan Section -->
-    <section id="plan" class="plan-section">
+    <section id="plan" class="full-section">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1>Plan crecer</h1>
+                    <h1 class="tittle-section"> Plan crecer</h1>
                     <p class="black"><b>Seleccione una opción de cada grupo</b> para saber cuál es el <b>plan de financiaciamiento</b> que mejor se adapta a su empresa</p>
                     <ol class="breadcrumb"></ol>
                 <div id="accordion">
@@ -206,7 +191,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12" style="border-bottom: 2px solid">
-                    <h1 class="white">Equipo</h1>
+                    <h1 class="tittle-section white">Equipo</h1>
                     <div class="col-md-4">
                       <center>
                         {{ Html::image('images/equipo/pm1.jpg', '1', ['class'=>"img-circle", "height" => 150]) }}
@@ -252,7 +237,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1>Indicadores</h1>
+                    <h1 class="tittle-section">Indicadores</h1>
                     @foreach(App\Indicator::all() as $indicator)
                       <div class="col-md-3 indicator">
                         <p>{!! $indicator->name!!}</p>

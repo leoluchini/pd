@@ -77,21 +77,21 @@ p.newspaper:first-letter {
 .black{
     color: #000;
 }
-.about-section {
-    height: 100%;
-    padding-top: 100px;
+
+.middle-section {
+    min-height: 50%;
+    padding-top: 60px;
 }
 
-.statistics-section {
+.full-section {
     min-height: 100%;
-    padding-top: 80px;
-    background: #f7f7f7;
+    padding-top: 60px;
 }
 
-.plan-section {
-    min-height: 100%;
-    padding-top: 80px; 
+.tittle-section{
+    margin-bottom: 30px;
 }
+
 .col-plan{
     min-height: 400px;
     border-left: 5px solid #e7e7e7;
@@ -103,10 +103,6 @@ p.newspaper:first-letter {
     background: #F7A600; 
 }
 
-.services-section {
-    height: 100%;
-    padding-top: 60px;
-}
 .item-service{ 
     min-height: 315px;
     position: relative;
@@ -114,12 +110,6 @@ p.newspaper:first-letter {
 
 .item-service hr {
     border-top: 3px solid #F7A600;
-}
-
-.middle-section {
-    min-height: 50%;
-    padding-top: 80px;
-    background: #fff;
 }
 
 .contact-section {
