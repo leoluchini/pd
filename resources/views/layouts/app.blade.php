@@ -124,5 +124,6 @@
     {!! Html::script('js/jquery.easing.min.js') !!}
     {!! Html::script('js/scrolling-nav.js') !!}
     {!! Html::script('js/accordion.js') !!}
+    {!! Html::script('js/clients.js') !!}
   </body>
 </html>

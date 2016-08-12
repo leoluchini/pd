@@ -3,14 +3,14 @@
 @section('content')
     <!-- Carousel
     ================================================== -->
-    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <div id="carouselPortada" class="carousel slide" data-ride="carousel">
       <!-- Indicators -->
       <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1" class=""></li>
-        <li data-target="#myCarousel" data-slide-to="2" class=""></li>
-        <li data-target="#myCarousel" data-slide-to="3" class=""></li>
-        <li data-target="#myCarousel" data-slide-to="4" class=""></li>
+        <li data-target="#carouselPortada" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselPortada" data-slide-to="1" class=""></li>
+        <li data-target="#carouselPortada" data-slide-to="2" class=""></li>
+        <li data-target="#carouselPortada" data-slide-to="3" class=""></li>
+        <li data-target="#carouselPortada" data-slide-to="4" class=""></li>
       </ol>
       <div class="carousel-inner" role="listbox">
         <div class="item active">
@@ -199,6 +199,10 @@
                         <ul class="list-unstyled white">
                           <li>Licenciado en economía.</li>
                           <li>Mercado de trabajo y análisis de datos</li>
+                          <a href="#">{{ Html::image('images/redes_twitter.png') }}</a>
+                          <a href="#">{{ Html::image('images/redes_skype.png') }}</a>
+                          <a href="#">{{ Html::image('images/redes_linkedin.png') }}</a>
+                          <a href="#">{{ Html::image('images/redes_mail.png') }}</a>  
                         </ul>
                       </center>
                     </div>
@@ -208,7 +212,11 @@
                         <p>Martín Pollera</p>
                         <ul class="list-unstyled white">
                           <li>Licenciado en economía.</li>
-                          <li>Cadena de valor, sectores productivos, Financiamiento PyME</li>
+                          <li>Cadena de valor, sectores productivos, PyMEs</li>
+                          <a href="#">{{ Html::image('images/redes_twitter.png') }}</a>
+                          <a href="#">{{ Html::image('images/redes_skype.png') }}</a>
+                          <a href="#">{{ Html::image('images/redes_linkedin.png') }}</a>
+                          <a href="#">{{ Html::image('images/redes_mail.png') }}</a>
                         </ul>
                       </center>
                     </div>
@@ -219,6 +227,10 @@
                         <ul class="list-unstyled white">
                           <li>Licenciado en economía.</li>
                           <li>Comercio exterior y Panorama internacional</li>
+                          <a href="#">{{ Html::image('images/redes_twitter.png') }}</a>
+                          <a href="#">{{ Html::image('images/redes_skype.png') }}</a>
+                          <a href="#">{{ Html::image('images/redes_linkedin.png') }}</a>
+                          <a href="#">{{ Html::image('images/redes_mail.png') }}</a>
                         </ul>
                       </center>
                     </div>
@@ -252,13 +264,45 @@
 
     <!-- Clients Section -->
     <section id="clients" class="middle-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h1>Clients</h1>
-                </div>
-            </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h1 class="titulo_seccion">Clientes</h1>
+          </div>
         </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="carousel slide multi-item-carousel" id="theCarousel" >
+              <div class="carousel-inner">
+                <div class="item active">
+                  <div class="col-xs-3"><a href="#1"><img src="{{url('images/clientes/clientes-15.png')}}" class="img-responsive"></a></div>
+                </div>
+                <div class="item">
+                  <div class="col-xs-3"><a href="#1"><img src="{{url('images/clientes/clientes-16.png')}}" class="img-responsive"></a></div>
+                </div>
+                <div class="item">
+                  <div class="col-xs-3"><a href="#1"><img src="{{url('images/clientes/clientes-17.png')}}" class="img-responsive"></a></div>
+                </div>
+                <div class="item">
+                  <div class="col-xs-3"><a href="#1"><img src="{{url('images/clientes/clientes-18.png')}}" class="img-responsive"></a></div>
+                </div>
+                <div class="item">
+                  <div class="col-xs-3"><a href="#1"><img src="{{url('images/clientes/clientes-19.png')}}" class="img-responsive"></a></div>
+                </div>
+                <div class="item">
+                  <div class="col-xs-3"><a href="#1"><img src="{{url('images/clientes/clientes-20.png')}}" class="img-responsive"></a></div>
+                </div>
+                <div class="item">
+                  <div class="col-xs-3"><a href="#1"><img src="{{url('images/clientes/clientes-21.png')}}" class="img-responsive"></a></div>
+                </div>
+                <div class="item">
+                  <div class="col-xs-3"><a href="#1"><img src="{{url('images/clientes/clientes-22.png')}}" class="img-responsive"></a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Contact Section -->

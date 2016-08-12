@@ -28,7 +28,7 @@
 -------------------------------------------------- */
 
 /* Carousel base class */
-.carousel {
+#carouselPortada {
   height: 500px;
 }
 /* Since positioning the image, we need to help out the caption */
@@ -40,7 +40,7 @@
   color: #fff;
 }
 /* Declare heights because of positioning of img element */
-.carousel .item {
+#carouselPortada .item {
   height: 400px;
   background-color: #777;
 }
