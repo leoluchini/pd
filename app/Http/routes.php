@@ -19,6 +19,7 @@ Route::get('/', function () {
 Route::auth();
 
 	Route::resource('indicadores', 'IndicatorController');
+	Route::resource('servicios', 'ServiceController');
 	Route::resource('entities.topics', 'EntityTopicController');
 	Route::resource('entities.topics.items', 'EntityTopicItemController');
 Route::group(['middleware' => 'auth'], function () {
