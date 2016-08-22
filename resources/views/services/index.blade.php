@@ -20,8 +20,11 @@
                 <td>{!! $service->name !!}</td>
                 <td>{!! $service->description !!}</td>
                 <td>
-                    <a class="btn btn-link" href="{{ route('servicios.show', $service->id)}}"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a>
-                    <a class="btn btn-link" href="{{ route('servicios.edit', $service->id)}}"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>
+                    <div class="btn-group" role="toolbar">
+                        <a class="btn btn-link btn-xs" href="{{ route('servicios.show', $service->id)}}"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a>
+                        <a class="btn btn-link btn-xs" href="{{ route('servicios.edit', $service->id)}}"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>
+                        <a class="btn btn-link btn-xs" href="{{ route('servicios.destroy', $service->id)}}"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a>
+                    </div>
                 </td>
             </tr>
             @endforeach

@@ -27,7 +27,8 @@ class ServiceController extends Controller
      */
     public function create()
     {
-        //
+        $service = new Service;
+        return view('services.create')->withService($service);
     }
 
     /**
@@ -61,7 +62,8 @@ class ServiceController extends Controller
      */
     public function edit($id)
     {
-        //
+        $service = Service::findOrFail($id);
+        return view('services.edit')->withService($service);
     }
 
     /**
