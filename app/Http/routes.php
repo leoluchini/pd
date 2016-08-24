@@ -20,6 +20,7 @@ Route::auth();
 
 	Route::resource('indicadores', 'IndicatorController');
 	Route::resource('servicios', 'ServiceController');
+	Route::get('servicios/{id}/cambiar_privacidad', [ 'as' => 'servicios.change_privacity' , 'uses' => 'ServiceController@change_privacity'] );
 	Route::resource('entities.topics', 'EntityTopicController');
 	Route::resource('entities.topics.items', 'EntityTopicItemController');
 Route::group(['middleware' => 'auth'], function () {

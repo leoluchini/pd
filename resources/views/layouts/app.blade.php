@@ -108,10 +108,14 @@
     </nav>
     
     @yield('content')
-    
+
     <div class="container-fluid">
-        @yield('content-backend')
+        <div style="margin-top:120px">
+            @include('layouts.flashs')
+            @yield('content-backend')
+        </div>
     </div>
+    @include('layouts.modals')
     <!-- JavaScripts -->
 
     <!-- jQuery -->
@@ -125,5 +129,6 @@
     {!! Html::script('js/scrolling-nav.js') !!}
     {!! Html::script('js/accordion.js') !!}
     {!! Html::script('js/clients.js') !!}
+    {!! Html::script('js/app.js') !!}
   </body>
 </html>

@@ -39,7 +39,16 @@ class ServiceController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $inputs = $request->all();
+        $service = Service::create($inputs);
+        if ($request->hasFile('image')) {
+            $fileName = seoString($service->name).'.'.$request->file('image')->getClientOriginalExtension();
+            $request->file('image')->move(public_path('images/servicios'), $fileName);
+            $service->image = 'images/servicios/'.$fileName;
+            $service->save();
+        }
+        flash('Servicio creado correctamente.', 'success');
+        return redirect(route('servicios.index'));
     }
 
     /**
@@ -86,6 +95,19 @@ class ServiceController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $service = Service::findOrFail($id);
+        \File::delete($service->image);
+        $service->delete();
+        flash('Servicio borrado correctamente.', 'success');
+        return redirect(route('servicios.index'));
+    }
+
+    public function change_privacity($id)
+    {
+        $service = Service::findOrFail($id);
+        $service->change_privacity();
+        $service->save();
+        flash('Privacidad cambiada correctamente.', 'success');
+        return redirect(route('servicios.index'));
     }
 }

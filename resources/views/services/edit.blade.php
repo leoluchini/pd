@@ -3,7 +3,7 @@
 @section('content-backend')
 	<div class="row" style="margin-top:120px;">
 		<div class="col-md-12">
-			{!! Form::model($service, ['route' => ['servicios.update', $service->id]]) !!}
+			{!! Form::model($service, ['route' => ['servicios.update', $service->id], 'method' => 'put']) !!}
 				@include('services.form')
 			{!! Form::close() !!}
 		</div>

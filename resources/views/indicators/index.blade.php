@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content-backend')
-    <table class="table" style="margin-top:160px;">
+    <table class="table">
         <thead>
             <tr>
                 <th>Nombre</th>
