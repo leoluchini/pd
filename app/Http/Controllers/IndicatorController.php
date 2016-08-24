@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\IndicatorRequest;
 
 use App\Http\Requests;
 use App\Indicator;
@@ -27,7 +28,7 @@ class IndicatorController extends Controller
      */
     public function create()
     {
-        //
+        return view('indicators.create');
     }
 
     /**
@@ -36,9 +37,12 @@ class IndicatorController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(IndicatorRequest $request)
     {
-        //
+        $inputs = $request->all();
+        Indicator::create($inputs);
+        flash('Indicador creado correctamente.', 'success');
+        return redirect(route('indicadores.index'));
     }
 
     /**
@@ -60,7 +64,8 @@ class IndicatorController extends Controller
      */
     public function edit($id)
     {
-        //
+        $indicator = Indicator::findOrFail($id);
+        return view('indicators.edit')->withIndicator($indicator);
     }
 
     /**
@@ -70,9 +75,13 @@ class IndicatorController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(IndicatorRequest $request, $id)
     {
-        //
+        $inputs = $request->all();
+        $indicator = Indicator::findOrFail($id);
+        $indicator->update($inputs);
+        flash('Indicador actualizado correctamente.', 'success');
+        return redirect(route('indicadores.index'));
     }
 
     /**
@@ -83,6 +92,9 @@ class IndicatorController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $indicator = Indicator::findOrFail($id);
+        $indicator->delete();
+        flash('Indicador borrado correctamente.', 'success');
+        return redirect(route('indicadores.index'));
     }
 }
