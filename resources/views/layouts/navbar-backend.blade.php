@@ -1,5 +1,6 @@
+    <?php $currentPath= \Request::route()->getName();?>
     <!-- Navigation -->
-    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container-fluid">
             <div class="navbar-header page-scroll">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
@@ -29,7 +30,7 @@
                         <li>
                             <a class="page-scroll" href="#about">Quienes Somos</a>
                         </li>
-                        <li>
+                        <li class="{{ in_array($currentPath, ['servicios.index']) ? 'active' : '' }}">
                             <a class="page-scroll" href="{{ route('servicios.index') }}">Servicios</a>
                         </li>
                         <li>
@@ -38,7 +39,7 @@
                         <li>
                             <a class="page-scroll" href="#staff">Staff</a>
                         </li>
-                        <li>
+                        <li class="{{ in_array($currentPath, ['indicadores.index']) ? 'active' : '' }}">
                             <a class="page-scroll" href="{{ route('indicadores.index') }}">Indicadores</a>
                         </li>
                         <li>

@@ -29,7 +29,7 @@
                     <li>
                         <a class="page-scroll" href="#about">Quienes Somos</a>
                     </li>
-                    <li>
+                    <li >
                         <a class="page-scroll" href="#services">Servicios</a>
                     </li>
                     <li>
@@ -63,6 +63,7 @@
                         </a>
 
                         <ul class="dropdown-menu" role="menu">
+                            <li><a href="{{ url('/home') }}"><i class="fa fa-btn fa-wrench"></i>Administrar</a></li>
                             <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Cerrar sesión</a></li>
                         </ul>
                     </li>

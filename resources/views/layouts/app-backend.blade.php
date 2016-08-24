@@ -14,12 +14,8 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-    {!! Html::style('css/scrolling-nav.css') !!}
-    {!! Html::style('css/full-slider.css') !!}
-    {!! Html::style('css/carousel.css') !!}
-    {!! Html::style('css/accordion.css') !!}
     {!! Html::style('css/app.css') !!}
-
+    {!! Html::style('css/backend-nav.css') !!}
     <style>
         body {
             font-family: 'Lato';
@@ -30,11 +26,16 @@
         }
     </style>
 </head>
-<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
-    @include('layouts.navbar-frontend')
-    
-    @yield('content')
+<body>
+    @include('layouts.navbar-backend')
 
+    <div class="container-fluid">
+        <div style="margin-top:80px">
+            @include('layouts.flashs')
+            @yield('content-backend')
+        </div>
+    </div>
+    @include('layouts.modals')
     <!-- JavaScripts -->
 
     <!-- jQuery -->

@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.app-backend')
 
 @section('content-backend')
 	<div class="row" style="margin-top:120px;">
