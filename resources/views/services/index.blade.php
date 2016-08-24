@@ -6,7 +6,7 @@
             <a class="btn btn-primary pull-right" href="{{ route('servicios.create')}}">Nuevo</a>
         </div>
     </div>
-    <table class="table">
+    <table id="sort" class="table">
         <thead>
             <tr>
                 <th>Nombre</th>
@@ -17,7 +17,7 @@
         </thead>
         <tbody>
             @foreach($services as $service)
-            <tr>
+            <tr data-update="{{ route('servicios.change_orden', $service->id) }}">
                 <td>{!! $service->name !!}</td>
                 <td>{{ Html::image($service->image, $service->name, array('class' => 'img-responsive img-thumbnail', 'style' => 'width:204px;height:auto;')) }}</td>
                 <td style="width:50%">{!! $service->description !!}</td>
@@ -37,4 +37,7 @@
             @endforeach
         </tbody>
     </table>
+@endsection
+@section('javascript')
+    {!! Html::script('js/service.js') !!}
 @endsection

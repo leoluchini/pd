@@ -18,6 +18,7 @@ class CreateServicesTable extends Migration
             $table->text('description');
             $table->string('image');
             $table->boolean('is_private')->default(false);
+            $table->integer('orden');
             $table->timestamps();
         });
     }

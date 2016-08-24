@@ -6,7 +6,7 @@
             <a class="btn btn-primary pull-right" href="{{ route('indicadores.create')}}">Nuevo</a>
         </div>
     </div>
-    <table class="table">
+    <table id="sort" class="table">
         <thead>
             <tr>
                 <th>Nombre</th>
@@ -17,7 +17,7 @@
         </thead>
         <tbody>
             @foreach($indicators as $indicator)
-            <tr>
+            <tr data-update="{{ route('indicadores.change_orden', $indicator->id) }}">
                 <td>{!! $indicator->name !!}</td>
                 <td>{!! $indicator->value !!}</td>
                 <td>{!! $indicator->year !!}</td>

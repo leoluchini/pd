@@ -6,8 +6,14 @@ use Illuminate\Database\Eloquent\Model;
 
 class Service extends Model
 {
-    protected $fillable = [ 'name', 'description', 'image', 'is_private'];
+    protected $fillable = [ 'name', 'description', 'image', 'is_private', 'orden'];
     
+    public static function boot() {
+			static::creating( function ($service) {
+			  $service->orden = Service::count() + 1;
+			});
+			parent::boot();
+		}
     public function files()
     {
         return $this->hasMany('App\ServiceFile');

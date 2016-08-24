@@ -16,7 +16,7 @@ class ServiceController extends Controller
      */
     public function index()
     {
-        $services = Service::all();
+        $services = Service::orderBy('orden', "asc")->get();
         return view('services.index')->withServices($services);
     }
 
@@ -109,5 +109,13 @@ class ServiceController extends Controller
         $service->save();
         flash('Privacidad cambiada correctamente.', 'success');
         return redirect(route('servicios.index'));
+    }
+
+    public function change_orden(Request $request, $id)
+    {
+        $inputs = $request->all();
+        $service = Service::findOrFail($id);
+        $service->update($inputs);
+        return response()->json(array('status' => 200, 'orden' => $service->orden));
     }
 }

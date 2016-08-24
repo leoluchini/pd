@@ -17,7 +17,7 @@ class IndicatorController extends Controller
      */
     public function index()
     {
-        $indicators = Indicator::all();
+        $indicators = Indicator::orderBy("orden", "asc")->get();
         return view('indicators.index')->withIndicators($indicators);
     }
 
@@ -96,5 +96,13 @@ class IndicatorController extends Controller
         $indicator->delete();
         flash('Indicador borrado correctamente.', 'success');
         return redirect(route('indicadores.index'));
+    }
+
+    public function change_orden(Request $request, $id)
+    {
+        $inputs = $request->all();
+        $indicator = Indicator::findOrFail($id);
+        $indicator->update($inputs);
+        return response()->json(array('status' => 200, 'orden' => $indicator->orden));
     }
 }
