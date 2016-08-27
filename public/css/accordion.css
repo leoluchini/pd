@@ -4,8 +4,6 @@
     padding:0;
     height:370px;
     width: 100%;
-    border-top:2px solid #000000;
-    border-bottom:2px solid #000000;
     overflow:hidden;
 }
 
@@ -24,19 +22,36 @@
     width:848px
 }
 .panelContent {
-    padding:15px 15px 15px 55px;
+    padding:0px 15px 15px 55px;
     height:240px;
     width:778px;
 }
 .header {
-    width:42px;
+    width:50px;
     height:100%;
     float:left;
-    background: #f7f7f7;
-    border-right:2px solid #ffffff;
+    background: /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#efefef+0,fcfcfc+100 */
+background: #efefef; /* Old browsers */
+background: -moz-linear-gradient(left,  #efefef 0%, #fcfcfc 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(left,  #efefef 0%,#fcfcfc 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to right,  #efefef 0%,#fcfcfc 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#efefef', endColorstr='#fcfcfc',GradientType=1 ); /* IE6-9 */
+
+    border-left:2px solid #444;
     cursor:pointer
 }
 
 .last {
     border:none
+}
+
+.numeros_plancrecer {
+    font-size: 1.5em;
+    padding: 10px 5px 0 5px;
+}
+
+.titulos_plancrecer {
+    font-size: 1.5em;
+    padding: 10px 5px 0 5px;
+    color: #F7A600;
 }

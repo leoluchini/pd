@@ -90,6 +90,7 @@ p.newspaper:first-letter {
 
 .tittle-section{
     margin-bottom: 30px;
+    font-size: 4em;
 }
 
 .col-plan{
@@ -110,6 +111,26 @@ p.newspaper:first-letter {
 
 .item-service hr {
     border-top: 3px solid #F7A600;
+}
+
+
+
+article {
+  width:300px;
+  margin: 2rem auto;/*no influye*/
+  line-height: 1.5rem;
+}
+article p {
+  max-height: 3rem;/*line-height por nº de líneas*/
+  overflow: hidden;
+  text-align: justify; 
+}
+article p::after {
+  content:'...';
+  background: #FFEEAA;
+  position: absolute;
+  top: 4.5rem;/*max-height menos 1 line-height*/
+  right: 0;
 }
 
 .contact-section {
@@ -222,3 +243,34 @@ a.skype:hover{
 
 
 .titulo_seccion{ font-size: 4em}
+
+
+.list-group-item{
+    border: none;
+}
+
+.list-group-item.active{
+    background-color: #222;
+    border: none;
+}
+
+.list-group-item.active:hover{
+    background-color: #444;
+    border: none;
+}
+
+.breadcrumb a {
+    text-decoration: none;
+    color: #222;
+    font-size: 1.2em;
+}
+
+.equipo_nombre_socio {
+    font-size: 2em;
+    font-family: 'gothamregular';
+}
+
+
+.indicador_dato{
+    font-size: 4em;
+}

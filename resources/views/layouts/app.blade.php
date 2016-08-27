@@ -19,10 +19,11 @@
     {!! Html::style('css/carousel.css') !!}
     {!! Html::style('css/accordion.css') !!}
     {!! Html::style('css/app.css') !!}
+    {!! Html::style('css/gotham.css') !!}
 
     <style>
         body {
-            font-family: 'Lato';
+            font-family: 'gothamregular';
         }
 
         .fa-btn {

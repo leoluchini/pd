@@ -7,8 +7,10 @@
             @foreach($services as $service)
               <div class="col-lg-4 item-service">
                 {!! Html::image($service->image, $service->name, ['class' => 'img-responsive'])!!}
-                <h3 class="black">{!! $service->name !!}</h3>
-                <p>{!! $service->description !!}</p>
+                <article>
+                    <h3 class="black">{!! $service->name !!}</h3>
+                    <p class="cortar_texto">{!! $service->description !!}</p>
+                </article>
                 <hr>
               </div>
             @endforeach

@@ -86,14 +86,14 @@
                 <div class="col-lg-12">
                     <h1 class="tittle-section"> Plan crecer</h1>
                     <p class="black"><b>Seleccione una opción de cada grupo</b> para saber cuál es el <b>plan de financiaciamiento</b> que mejor se adapta a su empresa</p>
-                    <ol class="breadcrumb"></ol>
+                    <ol class="breadcrumb">Soy </ol>
                 <div id="accordion">
                   <div id="panel-accordion-1" class="panel-accordion">
                     <div class="header">
-                      #1
+                      <p class="numeros_plancrecer">#1</p>
                     </div>
                     <div class="panelContent"> 
-                      <h4>Yo soy</h4>
+                      <p class="titulos_plancrecer">Soy</p>
                        <div class="list-group list-plan">
                         @foreach(App\Entity::all() as $entity)
                           <a href="{{ route('entities.topics.index', $entity->id) }}" class="list-group-item">{{ $entity->name }}</a>
@@ -103,10 +103,10 @@
                   </div>
                   <div  id="panel-accordion-2" class="panel-accordion">
                     <div class="header">
-                      #2
+                      <p class="numeros_plancrecer">#2</p>
                     </div>
                     <div class="panelContent">
-                      <h4>Necesito financiamiento para</h4>
+                      <p class="titulos_plancrecer">Necesito financiamiento para</p>
                       <div class="loading hide">
                         {{ HTML::image('images/ajax-loader.gif') }}
                       </div>
@@ -116,10 +116,10 @@
                   </div>
                   <div  id="panel-accordion-3" class="panel-accordion">
                     <div class="header">
-                      #3
+                      <p class="numeros_plancrecer">#3</p>
                     </div>
                     <div class="panelContent">
-                      <h4>Quiero financiamiento para</h4>
+                      <p class="titulos_plancrecer">Quiero financiamiento para</p>
                       <div class="loading hide">
                         {{ HTML::image('images/ajax-loader.gif') }}
                       </div>
@@ -129,7 +129,7 @@
                   </div>
                   <div class="panel-accordion">
                     <div class="header">
-                      #4
+                      <p class="numeros_plancrecer">#4</p>
                     </div>
                     <div class="panelContent">
                       <div class="list-plan">
@@ -142,7 +142,7 @@
         </div>
     </section>
 
-    <!-- Staff Section -->
+    <!-- EQUIPO Section -->
     <section id="staff" class="staff-section">
         <div class="container">
             <div class="row">
@@ -151,7 +151,7 @@
                     <div class="col-md-4">
                       <center>
                         {{ Html::image('images/equipo/pm1.jpg', '1', ['class'=>"img-circle", "height" => 150]) }}
-                        <p>Sebastián Alvarez Hayes</p>
+                        <p class="equipo_nombre_socio">Sebastián Alvarez Hayes</p>
                         <ul class="list-unstyled white">
                           <li>Licenciado en economía.</li>
                           <li>Mercado de trabajo y análisis de datos</li>
@@ -160,12 +160,13 @@
                           <a href="#">{{ Html::image('images/redes_linkedin.png') }}</a>
                           <a href="#">{{ Html::image('images/redes_mail.png') }}</a>  
                         </ul>
+                        <br>
                       </center>
                     </div>
                     <div class="col-md-4">
                       <center>
                         {{ Html::image('images/equipo/pm2.jpg', '2', ['class'=>"img-circle", "height" => 150]) }}
-                        <p>Martín Pollera</p>
+                        <p class="equipo_nombre_socio">Martín Pollera</p>
                         <ul class="list-unstyled white">
                           <li>Licenciado en economía.</li>
                           <li>Cadena de valor, sectores productivos, PyMEs</li>
@@ -174,12 +175,13 @@
                           <a href="#">{{ Html::image('images/redes_linkedin.png') }}</a>
                           <a href="#">{{ Html::image('images/redes_mail.png') }}</a>
                         </ul>
+                        <br>
                       </center>
                     </div>
                     <div class="col-md-4">
                       <center>
                         {{ Html::image('images/equipo/pm3.jpg', '3', ['class'=>"img-circle", "height" => 150]) }}
-                        <p>Sebastián Lucero</p>
+                        <p class="equipo_nombre_socio">Sebastián Lucero</p>
                         <ul class="list-unstyled white">
                           <li>Licenciado en economía.</li>
                           <li>Comercio exterior y Panorama internacional</li>
@@ -188,6 +190,7 @@
                           <a href="#">{{ Html::image('images/redes_linkedin.png') }}</a>
                           <a href="#">{{ Html::image('images/redes_mail.png') }}</a>
                         </ul>
+                        <br>
                       </center>
                     </div>
                 </div>
