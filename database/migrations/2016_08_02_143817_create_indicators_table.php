@@ -16,7 +16,7 @@ class CreateIndicatorsTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->string('value');
-            $table->integer('year');
+            $table->string('year');
             $table->integer('orden');
             $table->timestamps();
         });

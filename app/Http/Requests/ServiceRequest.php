@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use App\Http\Requests\Request;
 
-class IndicatorRequest extends Request
+class ServiceRequest extends Request
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -23,10 +23,15 @@ class IndicatorRequest extends Request
      */
     public function rules()
     {
-        return [
+        
+        $validator = [
             'name' => 'required',
-            'value' => 'required',
-            'year' => 'required',
+            'description' => 'required'
         ];
+
+        if($this->method == "POST"){
+            $validator['image_upload'] = 'required';
+        }
+        return $validator;
     }
 }

@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\Http\Requests;
+use App\Http\Requests\ServiceRequest;
 use App\Service;
 
 class ServiceController extends Controller
@@ -37,13 +37,13 @@ class ServiceController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(ServiceRequest $request)
     {
         $inputs = $request->all();
         $service = Service::create($inputs);
-        if ($request->hasFile('image')) {
-            $fileName = seoString($service->name).'.'.$request->file('image')->getClientOriginalExtension();
-            $request->file('image')->move(public_path('images/servicios'), $fileName);
+        if ($request->hasFile('image_upload')) {
+            $fileName = seoString($service->name).'.'.$request->file('image_upload')->getClientOriginalExtension();
+            $request->file('image_upload')->move(public_path('images/servicios'), $fileName);
             $service->image = 'images/servicios/'.$fileName;
             $service->save();
         }
@@ -82,9 +82,20 @@ class ServiceController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(ServiceRequest $request, $id)
     {
-        //
+        $inputs = $request->all();
+        $service = Service::findOrFail($id);
+        $service->update($inputs);
+        if ($request->hasFile('image_upload')) {
+            \File::delete($service->image);
+            $fileName = seoString($service->name).'.'.$request->file('image_upload')->getClientOriginalExtension();
+            $request->file('image_upload')->move(public_path('images/servicios'), $fileName);
+            $service->image = 'images/servicios/'.$fileName;
+            $service->save();
+        }
+        flash('Servicio actualizado correctamente.', 'success');
+        return redirect(route('servicios.index'));
     }
 
     /**

@@ -5,8 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
+use App\Entity;
 
-class GrowthPlanController extends Controller
+class EntityController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +16,8 @@ class GrowthPlanController extends Controller
      */
     public function index()
     {
-        //
+        $entities = Entity::all();
+        return view('entities.index')->with(['entities' => $entities]);
     }
 
     /**
@@ -36,7 +38,10 @@ class GrowthPlanController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $inputs = $request->all();
+        Entity::create($inputs);
+        flash('Entidad creada correctamente.', 'success');
+        return redirect(route('plan_crecer.index'));
     }
 
     /**

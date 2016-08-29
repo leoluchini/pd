@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use App\Http\Requests\Request;
 
-class IndicatorRequest extends Request
+class TopicRequest extends Request
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,9 +24,7 @@ class IndicatorRequest extends Request
     public function rules()
     {
         return [
-            'name' => 'required',
-            'value' => 'required',
-            'year' => 'required',
+            'name' => 'required'
         ];
     }
 }

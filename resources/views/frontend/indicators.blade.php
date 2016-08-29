@@ -14,3 +14,10 @@
         </div>
     </div>
 </section>
+@section('javascript')
+    <script type="text/javascript">
+        $(function(){
+            $(".indicator").matchHeight()
+        })
+    </script>
+@endsection

@@ -13,6 +13,8 @@
 
 	
 Route::get('/', ['as' => '/', 'uses' => 'FrontendController@index']);
+Route::resource('entities.topics', 'EntityTopicController');
+Route::resource('entities.topics.items', 'EntityTopicItemController');
 
 Route::auth();
 
@@ -22,7 +24,12 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::resource('servicios', 'ServiceController');
 	Route::get('servicios/{id}/cambiar_privacidad', [ 'as' => 'servicios.change_privacity' , 'uses' => 'ServiceController@change_privacity'] );
 	Route::put('servicios/{id}/cambiar_orden', [ 'as' => 'servicios.change_orden' , 'uses' => 'ServiceController@change_orden'] );
-	Route::resource('entities.topics', 'EntityTopicController');
-	Route::resource('entities.topics.items', 'EntityTopicItemController');
+	
+	Route::group(['prefix' => 'plan_crecer'], function() {
+		Route::resource('entidades', 'EntityController');
+		Route::resource('topicos', 'TopicController');
+		Route::resource('items', 'ItemController');
+  });
+	
 	Route::get('/home', 'HomeController@index');	
 });

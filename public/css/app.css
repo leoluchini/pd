@@ -109,28 +109,23 @@ p.newspaper:first-letter {
     position: relative;
 }
 
-.item-service hr {
-    border-top: 3px solid #F7A600;
+.bottom {
+    position: absolute;
+    bottom: 0;
+    border-bottom: 3px solid #F7A600;
+    margin-bottom: 20px
 }
 
-
-
-article {
+.article {
   width:300px;
   margin: 2rem auto;/*no influye*/
   line-height: 1.5rem;
 }
-article p {
+
+.article p {
   max-height: 3rem;/*line-height por nº de líneas*/
   overflow: hidden;
   text-align: justify; 
-}
-article p::after {
-  content:'...';
-  background: #FFEEAA;
-  position: absolute;
-  top: 4.5rem;/*max-height menos 1 line-height*/
-  right: 0;
 }
 
 .contact-section {
@@ -223,25 +218,6 @@ a.skype:hover{
 }
 
 
-/* Extra small devices (phones, less than 768px) */
-/* No media query since this is the default in Bootstrap */
-
-/* Small devices (tablets, 768px and up) */
-@media (min-width: 768px) { ... }
-
-/* Medium devices (desktops, 992px and up) */
-@media (min-width: 992px) { ... }
-
-/* Large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {
-    .list-plan{
-        margin-top: 50px;
-        margin-bottom: 50px;
-    }
-}
-
-
-
 .titulo_seccion{ font-size: 4em}
 
 
@@ -273,4 +249,39 @@ a.skype:hover{
 
 .indicador_dato{
     font-size: 4em;
+}
+
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 300px) { 
+    .bottom{
+        width: 90%;
+    }
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+    .bottom{
+        width: 90%;
+    }
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .bottom{
+        width: 77%;
+    }
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .bottom{
+        width: 92.33%;
+    }
+    .list-plan{
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
 }

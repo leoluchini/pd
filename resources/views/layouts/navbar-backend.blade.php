@@ -12,8 +12,8 @@
                 <a href="{{ route('/') }}" class="navbar-brand page-scroll" href="#page-top">
                     <div class="row">
                         <div class="col-xs-12">
-                            {{ HTML::image('images/pm.png', 'pm', array('height' => '30')) }}
-                            {{ HTML::image('images/propio-marte.png', 'propio marte', array('class' => "logo",'height' => '20')) }}
+                            {{ HTML::image('images/pm-yellow.png', 'pm', array('height' => '30')) }}
+                            {{ HTML::image('images/propio-marte-yellow.png', 'propio marte', array('class' => "logo",'height' => '20')) }}
                         </div>
                     </div>
                 </a>
@@ -30,16 +30,16 @@
                         <li>
                             <a class="page-scroll" href="#about">Quienes Somos</a>
                         </li>
-                        <li class="{{ in_array($currentPath, ['servicios.index']) ? 'active' : '' }}">
+                        <li class="{{ in_array($currentPath, ['servicios.index','servicios.create','servicios.edit']) ? 'active' : '' }}">
                             <a class="page-scroll" href="{{ route('servicios.index') }}">Servicios</a>
                         </li>
-                        <li>
-                            <a class="page-scroll" href="#plan">Plan crecer</a>
+                        <li class="{{ in_array($currentPath, ['plan_crecer.entidades.index','plan_crecer.entidades.create','plan_crecer.entidades.edit','plan_crecer.topicos.index','plan_crecer.topicos.create','plan_crecer.topicos.edit']) ? 'active' : '' }}">
+                            <a class="page-scroll" href="{{ route('plan_crecer.entidades.index') }}">Plan crecer</a>
                         </li>
                         <li>
                             <a class="page-scroll" href="#staff">Staff</a>
                         </li>
-                        <li class="{{ in_array($currentPath, ['indicadores.index']) ? 'active' : '' }}">
+                        <li class="{{ in_array($currentPath, ['indicadores.index','indicadores.create','indicadores.edit']) ? 'active' : '' }}">
                             <a class="page-scroll" href="{{ route('indicadores.index') }}">Indicadores</a>
                         </li>
                         <li>
