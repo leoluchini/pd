@@ -298,4 +298,5 @@
             </p>
         </div>
     </section>
+    <a id="back-to-top" href="#" class="btn back-to-top" role="button" title="Arriba" data-toggle="tooltip" data-placement="top"><span class="glyphicon glyphicon-chevron-up"></span></a>
 @endsection

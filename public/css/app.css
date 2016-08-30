@@ -1,3 +1,13 @@
+.back-to-top {
+    cursor: pointer;
+    position: fixed;
+    bottom: 0;
+    right: 20px;
+    display:none;
+    color: #F7A600;
+    background-color: #FFF;
+    border-color: #F7A600;
+}
 #login-dp{
     min-width: 250px;
     padding: 14px 14px 0;
