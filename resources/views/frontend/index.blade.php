@@ -71,10 +71,11 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8">
-                    <h1 class="tittle-section"><strong>Quienes somos</strong></h1>
+                    <h1 class="tittle-section amarillo"><strong>Quienes somos</strong></h1>
                     <p class="newspaper text-justify">Somos una empresa joven que brinda servicios profesionales de excelencia, buscando siempre satisfacer de la mejor forma las necesidades de nuestros clientes. <b>Nos destacamos en el análisis y evaluación</b> global, sectorial y microeconómica. Brindamos <b>información y proyecciones</b> sobre la situación económica mundial, nacional y local, definiendo los escenarios alternativos posibles. Proporcionamos asesoramiento en <b>proyectos de inversión</b>, apoyados en un vasto conocimiento sobre las herramientas de financiamiento disponibles para adoptar <b>las mejores decisiones para su empresa</b>.</p>
                 </div>
                 <div class="col-lg-4">
+                  <p class="frase_quiene_somos">“El principal problema de los inversores -e incluso su mayor enemigo- suele ser él mismo.”</p>
                 </div>
             </div>
         </div>
@@ -90,7 +91,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1 class="tittle-section"> Plan crecer</h1>
+                    <h1 class="tittle-section amarillo"> PropioPYME</h1>
                     <p class="black"><b>Seleccione una opción de cada grupo</b> para saber cuál es el <b>plan de financiaciamiento</b> que mejor se adapta a su empresa</p>
                     <ol class="breadcrumb">Soy </ol>
                 <div id="accordion">
@@ -152,7 +153,7 @@
     <section id="staff" class="staff-section">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12" style="border-bottom: 2px solid">
+                <div class="col-lg-12">
                     <h1 class="tittle-section white">Equipo</h1>
                     <div class="col-md-4">
                       <center>
@@ -161,8 +162,6 @@
                         <ul class="list-unstyled white">
                           <li>Licenciado en economía.</li>
                           <li>Mercado de trabajo y análisis de datos</li>
-                          <a href="#">{{ Html::image('images/redes_twitter.png') }}</a>
-                          <a href="#">{{ Html::image('images/redes_skype.png') }}</a>
                           <a href="#">{{ Html::image('images/redes_linkedin.png') }}</a>
                           <a href="#">{{ Html::image('images/redes_mail.png') }}</a>  
                         </ul>
@@ -176,8 +175,6 @@
                         <ul class="list-unstyled white">
                           <li>Licenciado en economía.</li>
                           <li>Cadena de valor, sectores productivos, PyMEs</li>
-                          <a href="#">{{ Html::image('images/redes_twitter.png') }}</a>
-                          <a href="#">{{ Html::image('images/redes_skype.png') }}</a>
                           <a href="#">{{ Html::image('images/redes_linkedin.png') }}</a>
                           <a href="#">{{ Html::image('images/redes_mail.png') }}</a>
                         </ul>
@@ -191,8 +188,6 @@
                         <ul class="list-unstyled white">
                           <li>Licenciado en economía.</li>
                           <li>Comercio exterior y Panorama internacional</li>
-                          <a href="#">{{ Html::image('images/redes_twitter.png') }}</a>
-                          <a href="#">{{ Html::image('images/redes_skype.png') }}</a>
                           <a href="#">{{ Html::image('images/redes_linkedin.png') }}</a>
                           <a href="#">{{ Html::image('images/redes_mail.png') }}</a>
                         </ul>
@@ -200,10 +195,46 @@
                       </center>
                     </div>
                 </div>
+                <div class="clearfix"></div>
+                <hr>
                 <div class="col-lg-12">
-                  <div class="col-md-4"></div>
-                  <div class="col-md-4"></div>
-                  <div class="col-md-4"></div>
+                  <center>
+                    <div class="staff_secundario">
+                      <center>
+                        <h4>Mauro Álvarez</h4>
+                        <p class="white">Analista Senior</p>
+                        <p><small>Licenciado en economía. Tecnología e Innovación.</small></p>
+                      </center>
+                    </div>
+                    <div class="staff_secundario">
+                      <center>
+                        <h4>Emiliana Gisande</h4>
+                        <p class="white">Analista Senior</p>
+                        <p><small>Licenciado en economía. Tecnología e Innovación.</small></p>
+                      </center>
+                    </div>
+                    <div class="staff_secundario">
+                      <center>
+                        <h4>Javier Trezza</h4>
+                        <p class="white">Analista Senior</p>
+                        <p><small>Licenciado en economía. Tecnología e Innovación.</small></p>
+                      </center>
+                    </div>
+                    <div class="staff_secundario">
+                      <center>
+                        <h4>Sebastián Nader</h4>
+                        <p class="white">Analista Senior</p>
+                        <p><small>Licenciado en economía. Tecnología e Innovación.</small></p>
+                      </center>
+                    </div>
+                    <div class="staff_secundario">
+                      <center>
+                        <h4>Santiago Adamcik</h4>
+                        <p class="white">Analista Senior</p>
+                        <p><small>Licenciado en economía. Tecnología e Innovación.</small></p>
+                      </center>
+                    </div>
+                  </center>
                 </div>
             </div>
         </div>
@@ -217,7 +248,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-12">
-            <h1 class="titulo_seccion">Clientes</h1>
+            <h1 class="titulo_seccion amarillo">Clientes</h1>
           </div>
         </div>
         <div class="row">
@@ -275,15 +306,20 @@
                   </div>
                   <div class="col-md-2">
                     <h4>Seguinos</h4>
-                      <a href="#" class="social facebook"><i class="fa fa-btn fa-facebook btn-social"></i></a>
-                      <a href="#" class="social skype"><i class="fa fa-btn fa-skype btn-social"></i></a>
+                      <div>
+                       <a href="#" class="social facebook"><i class="fa fa-btn fa-facebook btn-social"></i></a>
+                        <a href="#" class="social skype"><i class="fa fa-btn fa-skype btn-social"></i></a>
+                      </div>
+                      <br>
+                      <div>
                       <a href="#" class="social linkedin"><i class="fa fa-btn fa-linkedin btn-social"></i></a>
                       <a href="#" class="social twitter"><i class="fa fa-btn fa-twitter btn-social"></i></a>
+                      </div>
                   </div>
                   <div class="col-md-2">
                     <h4>Contacto</h4>
-                      <p class="white">7 n°1554 e/516 y 517</p>
-                      <p class="white">424-1843</p>
+                      <p class="white">48 n°930 1A</p>
+                      <p class="white"><small>+54 9</small> 221 5559487</p>
                       <p class="white">contacto@propiomarte.com</p>
                   </div>
                 </div>

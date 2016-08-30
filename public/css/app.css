@@ -36,9 +36,9 @@
     border-bottom: 10px solid #F7A600;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    color: #F7A600;
-}
+
+/*COLORES*/
+.amarillo {color: #F7A600;}
 
 .panel-propio {
     border: 10px solid #F7A600;
@@ -111,6 +111,7 @@ p.newspaper:first-letter {
 .staff-section {
     min-height: 100%;
     padding-top: 80px;
+    padding-bottom: 50px;
     background: #F7A600; 
 }
 
@@ -126,17 +127,6 @@ p.newspaper:first-letter {
     margin-bottom: 20px
 }
 
-.article {
-  width:300px;
-  margin: 2rem auto;/*no influye*/
-  line-height: 1.5rem;
-}
-
-.article p {
-  max-height: 3rem;/*line-height por nº de líneas*/
-  overflow: hidden;
-  text-align: justify; 
-}
 
 .contact-section {
     min-height: 60%;
@@ -164,26 +154,33 @@ p.newspaper:first-letter {
 }
 
 a.social{
-    font-size: 2em;
+    font-size: 1.5em;
     text-decoration: none;
     background-color: #777;
     color: #000;
+    text-align: center;
+    padding: 7px 0 7px 0
 }
 
 a.social:hover{
     color: #fff; 
+    text-align: center;
 }
 a.facebook:hover{
     background-color: #3B5998;
+    text-align: center;
 }
 a.twitter:hover{
     background-color: #00aced;
+    text-align: center;
 }
 a.linkedin:hover{
     background-color: #007bb6;
+    text-align: center;
 }
 a.skype:hover{
     background-color: #12A5F4;
+    text-align: center;
 }
 .indicator{
     min-height: 130px;
@@ -294,4 +291,17 @@ a.skype:hover{
         margin-top: 50px;
         margin-bottom: 50px;
     }
+}
+
+
+.staff_secundario{
+    width: 18%;
+    display: inline-block;
+}
+
+.frase_quiene_somos{
+    font-family: 'gothamitalic';
+    padding-top: 105px;
+    font-size: 2em;
+    color: #888;
 }
