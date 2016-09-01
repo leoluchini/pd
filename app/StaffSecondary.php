@@ -12,4 +12,8 @@ class StaffSecondary extends Staff
 
 	protected $dates = ['created_at', 'updated_at'];
 
+  public function getTypeAttribute($value)
+  {
+    return 'secondary';
+  }
 }

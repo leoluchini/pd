@@ -10,7 +10,7 @@ class Staff extends Model
     use SingleTableInheritanceTrait;
 
   	protected $table = "staff";
-
+  	
   	protected static $singleTableTypeField = 'type';
 
   	protected static $singleTableSubclasses = [StaffPrimary::class, StaffSecondary::class];

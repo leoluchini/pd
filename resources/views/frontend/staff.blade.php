@@ -11,7 +11,7 @@
                     <ul class="list-unstyled white">
                       <li>{!! $primary->degree !!}</li>
                       <li>{!! $primary->description !!}</li>
-                      <a href="{!! $primary->linkedin !!}">{{ Html::image('images/redes_linkedin.png') }}</a>
+                      <a href="{!! $primary->linkedin !!}" target="_blank">{{ Html::image('images/redes_linkedin.png') }}</a>
                       <a href="mailto:{!! $primary->email !!}">{{ Html::image('images/redes_mail.png') }}</a>  
                     </ul>
                     <br>

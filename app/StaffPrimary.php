@@ -12,4 +12,8 @@ class StaffPrimary extends Staff
 
 	protected $dates = ['created_at', 'updated_at'];
 
+  public function getTypeAttribute($value)
+  {
+    return 'primary';
+  }
 }

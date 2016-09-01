@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateIndicatorsTable extends Migration
+class CreateCoverPagesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,12 +12,11 @@ class CreateIndicatorsTable extends Migration
      */
     public function up()
     {
-        Schema::create('indicators', function (Blueprint $table) {
+        Schema::create('cover_pages', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
-            $table->string('value');
-            $table->string('description');
-            $table->string('year');
+            $table->string('image');
+            $table->string('title');
+            $table->text('description');
             $table->integer('orden');
             $table->timestamps();
         });
@@ -30,6 +29,6 @@ class CreateIndicatorsTable extends Migration
      */
     public function down()
     {
-        Schema::drop('indicators');
+        Schema::drop('cover_pages');
     }
 }

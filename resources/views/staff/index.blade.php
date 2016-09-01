@@ -9,7 +9,7 @@
 					    <span class="caret"></span>
 					  </button>
 					  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-					    <li><a href="{{ route('staff.create', 'primary')}}">Equipo primario</a></li>
+					    <li><a href="{{ route('staff.create', ['type' => 'primary'])}}">Equipo primario</a></li>
 					    <li><a href="{{ route('staff.create', 'secondary')}}">Equipo secundario</a></li>
 					  </ul>
 					</div>
@@ -33,7 +33,9 @@
       <tbody>
       	@foreach($primary_staff as $primary)
       		<tr>
-      			<td>{{ Html::image($primary->image, $primary->name, array('class' => 'img-responsive img-thumbnail', 'style' => 'width:80px;height:auto;')) }}</td>
+      			<td>
+              {{ Html::image($primary->image, $primary->name, array('class' => 'img-responsive img-thumbnail', 'style' => 'width:100px;height:auto;')) }}
+            </td>
       			<td>{!! $primary->full_name !!}</td>
       			<td>{!! $primary->degree !!}</td>
       			<td>{!! $primary->description !!}</td>

@@ -24,8 +24,8 @@
                 <ul class="nav navbar-nav navbar-right">
                     <ul class="nav navbar-nav">
                         <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
-                        <li class="hidden">
-                            <a class="page-scroll" href="#page-top"></a>
+                        <li>
+                            <a class="page-scroll" href="{{ route('portada.index') }}">Portada</a>
                         </li>
                         <li>
                             <a class="page-scroll" href="#about">Quienes Somos</a>

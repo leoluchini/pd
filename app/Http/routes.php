@@ -25,6 +25,8 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::get('servicios/{id}/cambiar_privacidad', [ 'as' => 'servicios.change_privacity' , 'uses' => 'ServiceController@change_privacity'] );
 	Route::put('servicios/{id}/cambiar_orden', [ 'as' => 'servicios.change_orden' , 'uses' => 'ServiceController@change_orden'] );
 	Route::resource('staff', 'StaffController');
+	Route::resource('portada', 'CoverPageController', ['except' => ['create', 'store']]);
+	Route::put('portada/{id}/cambiar_orden', [ 'as' => 'portada.change_orden' , 'uses' => 'CoverPageController@change_orden'] );
 	
 	Route::group(['prefix' => 'plan_crecer'], function() {
 		Route::resource('entidades', 'EntityController');

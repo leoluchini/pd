@@ -11,6 +11,7 @@
             <tr>
                 <th>Nombre</th>
                 <th>Valor</th>
+                <th>Descripción</th>
                 <th>Año</th>
                 <th>Acciones</th>
             </tr>
@@ -20,6 +21,7 @@
             <tr data-update="{{ route('indicadores.change_orden', $indicator->id) }}">
                 <td>{!! $indicator->name !!}</td>
                 <td>{!! $indicator->value !!}</td>
+                <td>{!! $indicator->description !!}</td>
                 <td>{!! $indicator->year !!}</td>
                 <td>
                     <div class="btn-group" role="toolbar">

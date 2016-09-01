@@ -258,6 +258,10 @@ a.skype:hover{
     font-size: 4em;
 }
 
+.staff_secundario{
+    display: inline-block;
+}
+ 
 /* Extra small devices (phones, less than 768px) */
 /* No media query since this is the default in Bootstrap */
 
@@ -266,6 +270,9 @@ a.skype:hover{
     .bottom{
         width: 90%;
     }
+    .staff_secundario {
+        width: 100%;
+    }
 }
 
 /* Small devices (tablets, 768px and up) */
@@ -273,12 +280,18 @@ a.skype:hover{
     .bottom{
         width: 90%;
     }
+    .staff_secundario {
+        width: 45%;
+    }
 }
 
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) {
     .bottom{
         width: 77%;
+    }
+    .staff_secundario{
+        width: 18%;
     }
 }
 
@@ -294,10 +307,6 @@ a.skype:hover{
 }
 
 
-.staff_secundario{
-    width: 18%;
-    display: inline-block;
-}
 
 .frase_quiene_somos{
     font-family: 'gothamitalic';

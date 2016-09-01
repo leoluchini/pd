@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\Http\Requests;
+use App\Http\Requests\StaffRequest;
 use App\Staff;
 use App\StaffPrimary;
 use App\StaffSecondary;
@@ -28,9 +28,19 @@ class StaffController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
-        //
+       if( in_array($request->get('type'), ['primary', 'secondary']) ){
+            if($request->get('type') == 'primary'){
+                $staff = new StaffPrimary;
+            }else{
+                $staff = new StaffSecondary;
+            }
+            return view('staff.create')->withStaff($staff);
+       }else{
+            flash('Ocurrió un error al procesar su solicitud.', 'danger');
+            return redirect(route('staff.index'));
+       }
     }
 
     /**
@@ -39,9 +49,22 @@ class StaffController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StaffRequest $request)
     {
-        //
+        $inputs = $request->all();
+        if($request->input('type') == 'primary'){
+            StaffPrimary::create($inputs);
+        }else{
+            StaffSecondary::create($inputs);
+        }
+        if ($request->hasFile('image_upload')) {
+            $fileName = seoString($staff->full_name).'.'.$request->file('image_upload')->getClientOriginalExtension();
+            $request->file('image_upload')->move(public_path('images/equipo'), $fileName);
+            $staff->image = 'images/equipo/'.$fileName;
+            $staff->save();
+        }
+        flash('Staff creado exitosamente.', 'success');
+        return redirect(route('staff.index'));
     }
 
     /**
@@ -74,11 +97,18 @@ class StaffController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(StaffRequest $request, $id)
     {
         $inputs = $request->all();
         $staff = Staff::findOrFail($id);
         $staff->update($inputs);
+        if ($request->hasFile('image_upload')) {
+            \File::delete($staff->image);
+            $fileName = seoString($staff->full_name).'.'.$request->file('image_upload')->getClientOriginalExtension();
+            $request->file('image_upload')->move(public_path('images/equipo'), $fileName);
+            $staff->image = 'images/equipo/'.$fileName;
+            $staff->save();
+        }
         flash('Staff modificado correctamente.', 'success');
         return redirect(route('staff.index'));
     }
@@ -91,6 +121,9 @@ class StaffController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $staff = Staff::findOrFail($id);
+        $staff->delete();
+        flash('Staff borrado correctamente.', 'success');
+        return redirect(route('staff.index'));
     }
 }

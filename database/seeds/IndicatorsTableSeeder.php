@@ -14,7 +14,7 @@ class IndicatorsTableSeeder extends Seeder
     {
         Indicator::create(['name' => 'Clima/Termómetro de Inversiones (CI/TI)', 'value' => '+1,0%', 'year' => '2015']);
         Indicator::create(['name' => 'Índice de Consumo Eléctrico Industrial (ICEI).', 'value' => '29,2%', 'year' => '2015']);
-        Indicator::create(['name' => 'Índice de Precios del Consumidor (IPC).', 'value' => '-2,6% del PBI', 'year' => '2015']);
-        Indicator::create(['name' => 'Saldo comercial', 'value' => '-4,0% del PBI', 'year' => '2015']);
+        Indicator::create(['name' => 'Índice de Precios del Consumidor (IPC).', 'value' => '-2,6%', 'description' => 'del PBI', 'year' => '2015']);
+        Indicator::create(['name' => 'Saldo comercial', 'value' => '-4,0%','description' => 'del PBI' , 'year' => '2015']);
     }
 }

@@ -12,58 +12,7 @@
         <li data-target="#carouselPortada" data-slide-to="3" class=""></li>
         <li data-target="#carouselPortada" data-slide-to="4" class=""></li>
       </ol>
-      <div class="carousel-inner" role="listbox">
-        <div class="item active">
-          {{ Html::image('images/MP-1.png') }}
-          <div class="container">
-            <div class="carousel-caption">
-                {{ HTML::image('images/pm-white.png', 'pm', array('height' => '80')) }}
-                <h1> Coyuntura y proyecciones económicas</h1>
-                <p>Producimos información económica para que puedas tomar las mejores decisiones, ahora y siempre.</p>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          {{ Html::image('images/MP-2.png') }}
-          <div class="container">
-            <div class="carousel-caption">
-                {{ HTML::image('images/pm-white.png', 'pm', array('height' => '80')) }}
-              <h1>Producción y Desarrollo</h1>
-              <p>Realizamos estudios sobre las diferentes cadenas de valor, el mercado de trabajo y el comercio exterior.</p>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          {{ Html::image('images/MP-3.png') }}
-          <div class="container">
-            <div class="carousel-caption">
-                {{ HTML::image('images/pm-white.png', 'pm', array('height' => '80')) }}
-                <h1>Sector Público y Privado</h1>
-                <p>Asesoramos a empresas, cámaras empresariales, y gobiernos en la planificación de sus políticas públicas.</p>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          {{ Html::image('images/MP-4.png') }}
-          <div class="container">
-            <div class="carousel-caption">
-                {{ HTML::image('images/pm-white.png', 'pm', array('height' => '80')) }}
-                <h1>Finanzas empresariales e inversiones</h1>
-                <p>Asistimos a tu empresa para continuar desarrollando su negocio, con opciones de financiamiento muy convenientes para tus inversiones.</p>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          {{ Html::image('images/MP-5.png') }}
-          <div class="container">
-            <div class="carousel-caption">
-                {{ HTML::image('images/pm-white.png', 'pm', array('height' => '80')) }}
-                <h1>Somos parte de tu equipo</h1>
-                <p>Esperamos su contacto con nosotros.</p>
-            </div>
-          </div>
-        </div>
-      </div>
+      @include('frontend.cover_pages')
     </div><!-- /.carousel -->
 
     <!-- About Section -->
