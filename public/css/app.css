@@ -45,12 +45,14 @@
 }
 
 .newspaper {
+    letter-spacing: -0.1em;
     -webkit-column-count: 2; /* Chrome, Safari, Opera */
     -moz-column-count: 2; /* Firefox */
     column-count: 2;
 }
 
 p.newspaper:first-letter { 
+    font-family: 'gothamregular' !important;
     float: left; 
     font-size: 75px; 
     line-height: 60px; 
@@ -313,4 +315,27 @@ a.skype:hover{
     padding-top: 105px;
     font-size: 2em;
     color: #888;
+    line-height: 0.9em;
+
+}
+
+.frase_quiene_somos_firma{
+    font-family: 'gothamitalic';
+    padding-top: 0px;
+    font-size: 1em;
+    color: #999;
+}
+
+.descripcion_indicador{
+    color: black;
+    font-size: 1.9em;
+    margin: 0px
+}
+
+.nombre_indicador{
+    min-height: 105px;
+}
+
+.bienvenido_backend{
+    width: 50px;
 }

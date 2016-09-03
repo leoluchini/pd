@@ -34,16 +34,16 @@
                             <a class="page-scroll" href="{{ route('servicios.index') }}">Servicios</a>
                         </li>
                         <li class="{{ in_array($currentPath, ['plan_crecer.entidades.index','plan_crecer.entidades.create','plan_crecer.entidades.edit','plan_crecer.topicos.index','plan_crecer.topicos.create','plan_crecer.topicos.edit']) ? 'active' : '' }}">
-                            <a class="page-scroll" href="{{ route('plan_crecer.entidades.index') }}">Propio Pyme</a>
+                            <a class="page-scroll" href="{{ route('plan_crecer.entidades.index') }}">PropioPYME</a>
                         </li>
                         <li class="{{ in_array($currentPath, ['staff.index','staff.create','staff.edit']) ? 'active' : '' }}">
-                            <a class="page-scroll" href="{{ route('staff.index') }}">Staff</a>
+                            <a class="page-scroll" href="{{ route('staff.index') }}">Equipo</a>
                         </li>
                         <li class="{{ in_array($currentPath, ['indicadores.index','indicadores.create','indicadores.edit']) ? 'active' : '' }}">
                             <a class="page-scroll" href="{{ route('indicadores.index') }}">Indicadores</a>
                         </li>
                         <li>
-                            <a class="page-scroll" href="#clients">Nuestros Clientes</a>
+                            <a class="page-scroll" href="#clients">Clientes</a>
                         </li>
                     </ul>
                     <li class="dropdown">

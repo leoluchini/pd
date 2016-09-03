@@ -33,16 +33,16 @@
                         <a class="page-scroll" href="#services">Servicios</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#plan">Plan crecer</a>
+                        <a class="page-scroll" href="#plan">PlanPYME</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#staff">Staff</a>
+                        <a class="page-scroll" href="#staff">Equipo</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#indicators">Indicadores</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#clients">Nuestros Clientes</a>
+                        <a class="page-scroll" href="#clients">Clientes</a>
                     </li>
                 </ul>
                 @if(Auth::guest())

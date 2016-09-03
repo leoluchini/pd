@@ -5,12 +5,15 @@
                 <h1 class="tittle-section amarillo">Indicadores</h1>
                 @foreach($indicators as $indicator)
                   <div class="col-md-3 indicator">
-                    <p>{!! $indicator->name!!}</p>
+                    <div class="nombre_indicador">
+                        <h3>{!! $indicator->name!!}</h3>
+                        <h5 class="black"><strong>en {!! $indicator->year!!}</strong></h5>
+
+                    </div>
                     <h3 class="indicador_dato black">
                         <strong>{!! $indicator->value!!}</strong>
-                        <small>{{ $indicator->description }}</small>
                     </h3>
-                    <h5 class="black"><strong>en {!! $indicator->year!!}</strong></h5>
+                    <h3 class="descripcion_indicador">{{ $indicator->description }}</h3>
                   </div>
                 @endforeach
             </div>

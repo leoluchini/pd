@@ -25,6 +25,7 @@
                 </div>
                 <div class="col-lg-4">
                   <p class="frase_quiene_somos">“El principal problema de los inversores -e incluso su mayor enemigo- suele ser él mismo.”</p>
+                  <p class="frase_quiene_somos_firma pull-right">Benjamin Graham</p>
                 </div>
             </div>
         </div>
@@ -159,10 +160,10 @@
                       <a class="page-scroll" href="#page-top"></a>
                       <a class="page-scroll" href="#about">Quienes Somos</a>
                       <a class="page-scroll" href="#services">Servicios</a>
-                      <a class="page-scroll" href="#plan">Plan crecer</a>
-                      <a class="page-scroll" href="#staff">Staff</a>
+                      <a class="page-scroll" href="#plan">PropioPYME</a>
+                      <a class="page-scroll" href="#staff">Equipo</a>
                       <a class="page-scroll" href="#indicators">Indicadores</a>
-                      <a class="page-scroll" href="#clients">Nuestros Clientes</a>
+                      <a class="page-scroll" href="#clients">Clientes</a>
                     </div>
                   </div>
                   <div class="col-md-2">
@@ -180,7 +181,6 @@
                   <div class="col-md-2">
                     <h4>Contacto</h4>
                       <p class="white">48 n°930 1A</p>
-                      <p class="white"><small>+54 9</small> 221 5559487</p>
                       <p class="white">contacto@propiomarte.com</p>
                   </div>
                 </div>
