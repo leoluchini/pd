@@ -46,7 +46,7 @@ class CoverPageController extends Controller
         $cover_page->update($inputs);
         if ($request->hasFile('image_upload')) {
             \File::delete($cover_page->image);
-            $fileName = seoString($cover_page->tittle).'.'.$request->file('image_upload')->getClientOriginalExtension();
+            $fileName = $cover_page->id.'.'.$request->file('image_upload')->getClientOriginalExtension();
             $request->file('image_upload')->move(public_path('images/portadas'), $fileName);
             $cover_page->image = 'images/portadas/'.$fileName;
             $cover_page->save();

@@ -110,7 +110,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-12">
-            <h1 class="titulo_seccion amarillo">Clientes</h1>
+            <h1 class="titulo_seccion amarillo">Nuestros clientes</h1>
           </div>
         </div>
         <div class="row">
