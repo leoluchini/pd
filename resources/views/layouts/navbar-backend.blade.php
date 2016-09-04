@@ -52,7 +52,9 @@
                         </a>
 
                         <ul class="dropdown-menu" role="menu">
-                            <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Cerrar sesión</a></li>
+                            <li><a href="{{route('perfil')}}"><span class="glyphicon glyphicon-user"></span> Mi perfil</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="{{ url('/logout') }}"><span class="glyphicon glyphicon-log-out"></span> Cerrar sesión</a></li>
                         </ul>
                     </li>
                     

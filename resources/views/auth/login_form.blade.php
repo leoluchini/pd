@@ -24,7 +24,7 @@
     </div>
     <div class="form-group">
         <button type="submit" class="btn btn-primary btn-block">
-            <i class="fa fa-btn fa-sign-in"></i> Iniciar
+            <span class="glyphicon glyphicon-log-in"></span> Iniciar
         </button>
         <a class="btn btn-link" href="{{ url('/password/reset') }}">Olvidó su clave?</a>
     </div>

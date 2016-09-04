@@ -34,5 +34,8 @@ Route::group(['middleware' => 'auth'], function () {
 		Route::resource('items', 'ItemController');
   });
 	
-	Route::get('/home', 'HomeController@index');	
+  Route::get('perfil', [ 'as' => 'perfil' , 'uses' => 'ProfileController@edit' ] );
+  Route::patch('perfil', [ 'as' => 'perfil' , 'uses' => 'ProfileController@update'] );
+  Route::patch('update_password', [ 'as' => 'perfil.update_password' , 'uses' => 'ProfileController@update_password'] );
+	Route::get('/home', [ 'as' => 'home' , 'uses' => 'HomeController@index' ] );	
 });

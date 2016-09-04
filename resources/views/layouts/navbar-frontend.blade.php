@@ -62,9 +62,9 @@
                             Bienvenido {{ Auth::user()->name }} <span class="caret"></span>
                         </a>
 
-                        <ul class="dropdown-menu" role="menu">
-                            <li><a href="{{ url('/home') }}"><i class="fa fa-btn fa-wrench"></i>Administrar</a></li>
-                            <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Cerrar sesión</a></li>
+                        <ul class="dropdown-menu" role="menu" style="width: 100%">
+                            <li><a href="{{ url('/home') }}"><span class="glyphicon glyphicon-dashboard"></span> Administrar</a></li>
+                            <li><a href="{{ url('/logout') }}"><span class="glyphicon glyphicon-log-out"></span> Cerrar sesión</a></li>
                         </ul>
                     </li>
                 @endif
