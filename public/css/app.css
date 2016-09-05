@@ -261,7 +261,8 @@ a.skype:hover{
 }
 
 .staff_secundario{
-    display: inline-block;
+    padding-right: 10px;
+    padding-left: 10px;
 }
  
 /* Extra small devices (phones, less than 768px) */
@@ -293,7 +294,7 @@ a.skype:hover{
         width: 77%;
     }
     .staff_secundario{
-        width: 18%;
+        width: 20%;
     }
 }
 

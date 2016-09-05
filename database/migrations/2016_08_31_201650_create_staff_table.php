@@ -18,8 +18,7 @@ class CreateStaffTable extends Migration
             $table->string('full_name'); 
             $table->string('degree'); 
             $table->string('image')->nullable();
-            $table->text('description'); 
-            $table->string('email')->nullable(); 
+            $table->text('description');
             $table->text('linkedin')->nullable();
             $table->integer('orden');
             $table->timestamps();

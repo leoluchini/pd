@@ -33,7 +33,7 @@
                         <a class="page-scroll" href="#services">Servicios</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#plan">PlanPYME</a>
+                        <a class="page-scroll" href="#plan">PropioPYME</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#staff">Equipo</a>

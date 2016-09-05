@@ -32,13 +32,6 @@
         {!! $errors->first('image_upload', '<p class="help-block">:message</p>') !!}
       </div>
     </div>
-    <div class="col-md-4">
-      <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-          {!! Form::label('email', 'Correo electrónico :',['class' => 'control-label']) !!}
-          {!! Form::text('email', null, ['class' => 'form-control']) !!}
-          {!! $errors->first('email', '<p class="help-block">:message</p>') !!}
-      </div>
-    </div>
      <div class="col-md-4">
       <div class="form-group{{ $errors->has('linkedin') ? ' has-error' : '' }}">
           {!! Form::label('linkedin', 'Linkedin :',['class' => 'control-label']) !!}

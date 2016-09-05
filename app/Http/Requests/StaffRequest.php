@@ -30,7 +30,6 @@ class StaffRequest extends Request
         ];
 
         if($this->input('type') == 'primary'){
-            $validator['email'] = 'required|email';
             $validator['linkedin'] = 'required|active_url';
             $validator['image_upload'] = 'image|mimes:jpeg,png,jpg';
         }

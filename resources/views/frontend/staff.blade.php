@@ -23,7 +23,7 @@
           <div class="col-lg-12">
             <center>
               @foreach($secondary_staff as $secondary)
-                <div class="staff_secundario">
+                <div class="col-md-3 staff_secundario">
                   <center>
                     <h4>{!! $secondary->full_name !!}</h4>
                     <p class="white">{!! $secondary->degree !!}</p>
