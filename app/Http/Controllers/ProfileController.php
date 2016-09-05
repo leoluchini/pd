@@ -21,7 +21,7 @@ class ProfileController extends Controller
   {
   	$user = \Auth::user();
   	$user->update($request->all());
-    \Flash::success('Perfil actualizado correctamente');
+    flash('Perfil actualizado correctamente', 'success');
     return redirect(route('trabajo.index'));
   }
 
@@ -40,10 +40,10 @@ class ProfileController extends Controller
       return redirect()->back()->withErrors($validation->errors());
     }
 
-    $user->password = Hash::make($request->input('password'));
+    $user->password = $request->input('password');
     $user->save();
     
-    \Flash::success('Perfil actualizado correctamente');
+    flash('Perfil actualizado correctamente', 'success');
     return redirect('perfil');
   }
 }
