@@ -40,6 +40,29 @@ $(function(){
     })
   })
 
+  $("body").on('submit', 'form.form-service', function(e){
+    e.preventDefault();
+    form = $(this);
+    form.find('.has-error').tooltip('destroy');
+    form.find('.form-group').removeClass('has-error').removeClass('has-feedback').removeAttr('data-toggle').removeAttr('data-title').removeAttr('data-original-title').removeAttr('title');
+    form.find('.form-group').find('span').remove();
+    $.ajax({
+      url: $(this).attr('action'),
+      type    : $(this).attr('method'),
+      dataType: 'json',
+      data    : $(this).serialize(),
+      success : function( data ) {
+                  form.html('Suscripción exitosa');
+                },
+      error   : function( xhr, err ) {
+                  form.find('.form-group').addClass('has-error').addClass('has-feedback').attr('data-toggle', "tooltip").attr('data-title', xhr.responseJSON.email[0]);
+                  form.find('.form-group').tooltip();
+                  form.find('.form-group').append("<span class='glyphicon glyphicon-remove form-control-feedback'></span>");
+                       
+                }
+    })
+  })
+
   var fixHelperModified = function(e, tr) {
     var $originals = tr.children();
     var $helper = tr.clone();

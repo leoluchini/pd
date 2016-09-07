@@ -118,8 +118,14 @@ p.newspaper:first-letter {
 }
 
 .item-service{ 
-    min-height: 315px;
+    min-height: 350px;
     position: relative;
+}
+
+.form-service{
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 30px;
 }
 
 .bottom {
@@ -264,12 +270,23 @@ a.skype:hover{
     padding-right: 10px;
     padding-left: 10px;
 }
- 
+
+.btn-propio{
+    background-color: #F7A600;
+    color: #fff;
+}
+.btn-propio:hover{
+    background-color: #e7e7e7;
+    color: #F7A600;
+}
 /* Extra small devices (phones, less than 768px) */
 /* No media query since this is the default in Bootstrap */
 
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 300px) { 
+    .form-service{
+        width: 90%;
+    }
     .bottom{
         width: 90%;
     }
@@ -280,6 +297,9 @@ a.skype:hover{
 
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) { 
+    .form-service{
+        width: 90%;
+    }
     .bottom{
         width: 90%;
     }
@@ -290,6 +310,9 @@ a.skype:hover{
 
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) {
+    .form-service{
+        width: 77%;
+    }
     .bottom{
         width: 77%;
     }
@@ -300,6 +323,9 @@ a.skype:hover{
 
 /* Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
+    .form-service{
+        width: 92.33%;
+    }
     .bottom{
         width: 92.33%;
     }

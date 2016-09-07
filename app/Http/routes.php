@@ -15,6 +15,7 @@
 Route::get('/', ['as' => '/', 'uses' => 'FrontendController@index']);
 Route::resource('entities.topics', 'EntityTopicController');
 Route::resource('entities.topics.items', 'EntityTopicItemController');
+Route::post('servicios/{id}/suscribirse', [ 'as' => 'servicios.suscribe' , 'uses' => 'ServiceController@suscribe'] );
 
 Route::auth();
 

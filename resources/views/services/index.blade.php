@@ -12,6 +12,7 @@
                 <th>Nombre</th>
                 <th>Imagen</th>
                 <th>Descripcion</th>
+                <th>Suscripciones</th>
                 <th>Acciones</th>
             </tr>
         </thead>
@@ -21,6 +22,7 @@
                 <td>{!! $service->name !!}</td>
                 <td>{{ Html::image($service->image, $service->name, array('class' => 'img-responsive img-thumbnail', 'style' => 'width:204px;height:auto;')) }}</td>
                 <td style="width:50%">{!! $service->description !!}</td>
+                <td>{!! $service->suscribers->count() !!}</td>
                 <td>
                     <div class="btn-group" role="toolbar">
                         @if($service->is_private)

@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests\ServiceRequest;
 use App\Service;
+use Validator;
 
 class ServiceController extends Controller
 {
@@ -128,5 +129,21 @@ class ServiceController extends Controller
         $service = Service::findOrFail($id);
         $service->update($inputs);
         return response()->json(array('status' => 200, 'orden' => $service->orden));
+    }
+
+    public function suscribe(Request $request, $id)
+    {
+        $inputs = $request->only('email');
+        $service = Service::findOrFail($id);
+        $validator = Validator::make($request->all(), [
+            'email' => 'required|email',
+        ]);
+
+        if ($validator->fails()) {;
+            return response()->json($validator->messages(), 400);
+        }
+        
+        $service->suscribers()->firstOrCreate($inputs);
+        return response()->json(array('status' => 200));
     }
 }

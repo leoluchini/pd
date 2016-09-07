@@ -14,6 +14,11 @@ class Service extends Model
 			});
 			parent::boot();
 		}
+    public function suscribers()
+    {
+        return $this->hasMany('App\Subscriber');
+    }
+    
     public function files()
     {
         return $this->hasMany('App\ServiceFile');
