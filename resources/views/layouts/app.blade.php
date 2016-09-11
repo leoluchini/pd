@@ -8,6 +8,12 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>Propio Marte</title>
     
+    <meta name="description" content="Propio Pymes nos destacamos en el análisis y evaluación global, sectorial y microeconómica.">
+    <meta name="keywords" content="propio pyme,Industria,producción,empleo,inflación,inversión,proyecciones,finanzas,empresas,PyMEs,agroindustria,desarrollo,mercado de trabajo,indicadores,financiamiento, Comercio exterior,consultora económica">
+    <meta NAME="revisit-after" content="14 days">
+    <meta NAME="robots" content="index,follow">
+    <meta NAME="distribution" content="global">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css" integrity="sha384-XdYbMnZ/QjLh6iI4ogqCTaIjrFk87ip+ekIjefZch0Y+PvJ8CDYtEs1ipDmPorQ+" crossorigin="anonymous">
     <!-- Styles -->
     {!! Html::style('bootstrap/css/bootstrap.css') !!}
