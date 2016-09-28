@@ -13,8 +13,6 @@
 
 	
 Route::get('/', ['as' => '/', 'uses' => 'FrontendController@index']);
-Route::resource('entities.topics', 'EntityTopicController');
-Route::resource('entities.topics.items', 'EntityTopicItemController');
 Route::post('servicios/{id}/suscribirse', [ 'as' => 'servicios.suscribe' , 'uses' => 'ServiceController@suscribe'] );
 
 Route::auth();
@@ -29,10 +27,10 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::resource('portada', 'CoverPageController', ['except' => ['create', 'store']]);
 	Route::put('portada/{id}/cambiar_orden', [ 'as' => 'portada.change_orden' , 'uses' => 'CoverPageController@change_orden'] );
 	
-	Route::group(['prefix' => 'plan_crecer'], function() {
+	Route::group(['prefix' => 'propio_pymes'], function() {
 		Route::resource('entidades', 'EntityController');
-		Route::resource('topicos', 'TopicController');
-		Route::resource('items', 'ItemController');
+		Route::resource('entidades.objetos', 'ItemExpeditureController');
+		Route::resource('entidades.objetos.organismos', 'OrganizationController');
   });
 	
   Route::get('perfil', [ 'as' => 'perfil' , 'uses' => 'ProfileController@edit' ] );

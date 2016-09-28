@@ -8,8 +8,8 @@ class Entity extends Model
 {
     protected $fillable = ['name'];
 
-    public function topics()
+    public function itemExpeditures()
     {
-        return $this->belongsToMany('App\Topic');
+        return $this->hasMany('App\ItemExpediture');
     }
 }

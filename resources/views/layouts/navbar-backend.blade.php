@@ -33,8 +33,8 @@
                         <li class="{{ in_array($currentPath, ['servicios.index','servicios.create','servicios.edit']) ? 'active' : '' }}">
                             <a class="page-scroll" href="{{ route('servicios.index') }}">Servicios</a>
                         </li>
-                        <li class="{{ in_array($currentPath, ['plan_crecer.entidades.index','plan_crecer.entidades.create','plan_crecer.entidades.edit','plan_crecer.topicos.index','plan_crecer.topicos.create','plan_crecer.topicos.edit']) ? 'active' : '' }}">
-                            <a class="page-scroll" href="{{ route('plan_crecer.entidades.index') }}">PropioPYME</a>
+                        <li class="{{ in_array($currentPath, ['propio_pymes.entidades.index','propio_pymes.entidades.create','propio_pymes.entidades.edit','propio_pymes.entidades.objetos.index','propio_pymes.entidades.objetos.create','propio_pymes.entidades.objetos.edit']) ? 'active' : '' }}">
+                            <a class="page-scroll" href="{{ route('propio_pymes.entidades.index') }}">PropioPYME</a>
                         </li>
                         <li class="{{ in_array($currentPath, ['staff.index','staff.create','staff.edit']) ? 'active' : '' }}">
                             <a class="page-scroll" href="{{ route('staff.index') }}">Equipo</a>

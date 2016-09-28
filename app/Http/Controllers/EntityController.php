@@ -41,7 +41,7 @@ class EntityController extends Controller
         $inputs = $request->all();
         Entity::create($inputs);
         flash('Entidad creada correctamente.', 'success');
-        return redirect(route('plan_crecer.index'));
+        return redirect(route('propio_pymes.entidades.index'));
     }
 
     /**
@@ -52,7 +52,7 @@ class EntityController extends Controller
      */
     public function show($id)
     {
-        //
+        $entity = Entity::findOrFail($id);
     }
 
     /**
@@ -75,7 +75,9 @@ class EntityController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $inputs = $request->all();
+        $entity = Entity::findOrFail($id);
+        $entity->update($inputs);
     }
 
     /**
@@ -86,6 +88,9 @@ class EntityController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $entity = Entity::findOrFail($id);
+        $entity->delete();
+        flash('Entidad borrada correctamente.', 'success');
+        return redirect(route('propio_pymes.entidades.index'));
     }
 }

@@ -50,9 +50,11 @@
     {!! Html::script('js/defaults-es.js') !!}
     {!! Html::script('js/jquery.easing.min.js') !!}
     {!! Html::script('js/scrolling-nav.js') !!}
-    {!! Html::script('js/accordion.js') !!}
+    {!! Html::script('tinymce/tinymce.min.js') !!}
     {!! Html::script('js/clients.js') !!}
     {!! Html::script('js/app.js') !!}
+    {!! Html::script('js/textarea.js') !!}
+    {!! Html::script('js/edit.js') !!}
     @yield('javascript')
   </body>
 </html>
