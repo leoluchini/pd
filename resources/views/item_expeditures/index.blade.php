@@ -9,7 +9,7 @@
           <a href="{{ route('propio_pymes.entidades.index')}}" class='btn btn-primary'  data-toggle="tooltip" data-placement="top" title="Volver"><span class="glyphicon glyphicon-chevron-left"></span></a>
         </div>
       </div>
-        <h3>Objetos del gasto "{{ $entity->name }} </h3>
+        <h3>Objetos del gasto "{{ $entity->name }}" </h3>
       </div>
     </div>
   </div>

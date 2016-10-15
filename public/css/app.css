@@ -280,6 +280,59 @@ a.skype:hover{
     color: #F7A600;
 }
 .input-editable{ margin: 10px 0px 10px; }
+/*progressbar*/
+ #progressbar {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    overflow: hidden;
+    counter-reset: step;
+    /*CSS counters to number the steps*/
+}
+#progressbar li {
+    list-style-type: none;
+    text-transform: uppercase;
+    font-size: 10px;
+    width: 25%;
+    float: left;
+    position: relative;
+    text-align: center;
+}
+#progressbar li:before {
+    content: counter(step);
+    counter-increment: step;
+    width: 20px;
+    line-height: 20px;
+    display: block;
+    font-size: 10px;
+    color: white;
+    background: grey;
+    border-radius: 3px;
+    margin: 0 auto 5px auto;
+}
+/*progressbar connectors*/
+ #progressbar li:after {
+    content:'';
+    width: 100%;
+    height: 2px;
+    background: grey;
+    position: absolute;
+    left: -50%;
+    top: 9px;
+    z-index: -1;
+    /*put it behind the numbers*/
+}
+#progressbar li:first-child:after {
+    content: none;
+    /*connector not needed before the first step*/
+}
+/*marking active/completed steps nhlbi red*/
+
+/*The number of the step and the connector before it = nhlbi red*/
+ #progressbar li.active:before, #progressbar li.active:after {
+    background: #F7A600;
+    color: white;
+}
+
 /* Extra small devices (phones, less than 768px) */
 /* No media query since this is the default in Bootstrap */
 

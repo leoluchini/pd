@@ -20,7 +20,6 @@
     {!! Html::style('css/scrolling-nav.css') !!}
     {!! Html::style('css/full-slider.css') !!}
     {!! Html::style('css/carousel.css') !!}
-    {!! Html::style('css/accordion.css') !!}
     {!! Html::style('css/app.css') !!}
     {!! Html::style('css/gotham.css') !!}
 
@@ -48,7 +47,6 @@
     <!-- Scrolling Nav JavaScript -->
     {!! Html::script('js/jquery.easing.min.js') !!}
     {!! Html::script('js/scrolling-nav.js') !!}
-    {!! Html::script('js/accordion.js') !!}
     {!! Html::script('js/clients.js') !!}
     {!! Html::script('js/app.js') !!}
     @yield('javascript')

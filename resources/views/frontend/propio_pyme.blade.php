@@ -1,61 +1,30 @@
 <section id="plan" class="full-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h1 class="tittle-section amarillo"> PropioPYME</h1>
-                    <p class="black"><b>Seleccione una opción de cada grupo</b> para saber cuál es el <b>plan de financiaciamiento</b> que mejor se adapta a su empresa</p>
-                    <ol class="breadcrumb">Soy </ol>
-                <div id="accordion">
-                  <div id="panel-accordion-1" class="panel-accordion">
-                    <div class="header">
-                      <p class="numeros_plancrecer">#1</p>
-                    </div>
-                    <div class="panelContent"> 
-                      <p class="titulos_plancrecer">Soy</p>
-                       <div class="list-group list-plan">
-                        @foreach(App\Entity::all() as $entity)
-                          <a href="{{ route('entities.topics.index', $entity->id) }}" class="list-group-item">{{ $entity->name }}</a>
-                        @endforeach
-                      </div>
-                    </div>
-                  </div>
-                  <div  id="panel-accordion-2" class="panel-accordion">
-                    <div class="header">
-                      <p class="numeros_plancrecer">#2</p>
-                    </div>
-                    <div class="panelContent">
-                      <p class="titulos_plancrecer">Necesito financiamiento para</p>
-                      <div class="loading hide">
-                        {{ HTML::image('images/ajax-loader.gif') }}
-                      </div>
-                      <div class="list-group list-plan">
-                      </div>
-                    </div>
-                  </div>
-                  <div  id="panel-accordion-3" class="panel-accordion">
-                    <div class="header">
-                      <p class="numeros_plancrecer">#3</p>
-                    </div>
-                    <div class="panelContent">
-                      <p class="titulos_plancrecer">Quiero financiamiento para</p>
-                      <div class="loading hide">
-                        {{ HTML::image('images/ajax-loader.gif') }}
-                      </div>
-                      <div class="list-group list-plan">
-                      </div>
-                    </div>
-                  </div>
-                  <div class="panel-accordion">
-                    <div class="header">
-                      <p class="numeros_plancrecer">#4</p>
-                    </div>
-                    <div class="panelContent">
-                      <div class="list-plan">
-                      </div>
-                    </div>
-                  </div>
-              </div>
-              </div>
-            </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <h1 class="tittle-section amarillo"><strong>Propio Pyme</strong></h1>
+      </div>
+      <div class="col-md-6 col-md-offset-3">
+        <ul id="progressbar">
+          <li class="active first">Tama&ntilde;o de empresa</li>
+          <li class="second">Objeto del cr&eacute;dito</li>
+          <li class="third">Programas</li>
+          <li class="last">Organismo</li>
+        </ul>
+        <div class="panel panel-default current">
+          <div class="panel-body">
+            <ul class="list-group">
+              @foreach($entities as $entity)
+                <li class="list-group-item propio-pyme" data-url="{{ route('propio_pyme', $entity->id) }}">{{ $entity->name }}</li>
+              @endforeach
+              </ul>
+            <button class="btn btn-propio pull-right next"><span class="glyphicon glyphicon-chevron-right"></span></button>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </div>
+</section>
+@section('javascript')
+  {!! Html::script('js/propio_pyme.js') !!}
+@endsection

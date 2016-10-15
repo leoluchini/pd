@@ -37,7 +37,7 @@
     @include('frontend.services')
     
     <!-- Plan Section -->
-    
+    @include('frontend.propio_pyme')
 
     <!-- EQUIPO Section -->
     @include('frontend.staff')

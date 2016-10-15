@@ -9,7 +9,7 @@
           <a href="{{ route('propio_pymes.entidades.objetos.index', $entity->id)}}" class='btn btn-primary'  data-toggle="tooltip" data-placement="top" title="Volver"><span class="glyphicon glyphicon-chevron-left"></span></a>
         </div>
       </div>
-        <h3>Programas "{{ $item->name }} </h3>
+        <h3>Programas "{{ $item->name }}" </h3>
       </div>
     </div>
   </div>

@@ -13,6 +13,7 @@
 
 	
 Route::get('/', ['as' => '/', 'uses' => 'FrontendController@index']);
+Route::get('propio-pymes/{id}/{object?}/{program?}', ['as' => 'propio_pyme', 'uses' => 'PropioPymeController@index']);
 Route::post('servicios/{id}/suscribirse', [ 'as' => 'servicios.suscribe' , 'uses' => 'ServiceController@suscribe'] );
 
 Route::auth();
