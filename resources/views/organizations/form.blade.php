@@ -14,6 +14,6 @@
     {!! $errors->first('benefit_amount_term', '<p class="help-block">:message</p>') !!}
 </div>
 <div class="pull-right">
-	<a href="{{ route('propio_pymes.entidades.objetos.organismos.index', [$entity->id, $item->id])}}" class="btn btn-default">Cancelar</a>
+	<a href="{{ route('propio_pymes.entidades.objetos.programas.organismos.index', [$entity->id, $item->id,$program->id])}}" class="btn btn-default">Cancelar</a>
 	{!! Form::submit('Guardar', ['class' => 'btn btn-primary']); !!}
 </div>

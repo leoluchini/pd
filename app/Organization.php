@@ -8,8 +8,8 @@ class Organization extends Model
 {
     protected $fillable = ['name', 'description', 'benefit_amount_term'];
 
-    public function itemExpediture()
+    public function program()
     {
-        return  $this->belongsTo('App\ItemExpediture');
+        return  $this->belongsTo('App\Program');
     }
 }

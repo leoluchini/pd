@@ -16,12 +16,13 @@ class OrganizationController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index($idEntity, $idItemExpediture)
+    public function index($idEntity, $idItemExpediture, $idProgram)
     {
         $entity = Entity::findOrFail($idEntity);
         $item = $entity->itemExpeditures()->where('id', $idItemExpediture)->first();
-        $organizations = $item->organizations;
-        return view('organizations.index')->with(['entity' => $entity,'item' => $item, 'organizations' => $organizations]);
+        $program = $item->programs()->where('id', $idProgram)->first();
+        $organizations = $program->organizations;
+        return view('organizations.index')->with(['entity' => $entity,'item' => $item, 'program' => $program,'organizations' => $organizations]);
     }
 
     /**
@@ -29,11 +30,12 @@ class OrganizationController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create($idEntity, $idItemExpediture)
+    public function create($idEntity, $idItemExpediture, $idProgram)
     {
         $entity = Entity::findOrFail($idEntity);
         $item = $entity->itemExpeditures()->where('id', $idItemExpediture)->first();
-        return view('organizations.create')->with(['entity' => $entity,'item' => $item]);
+        $program = $item->programs()->where('id', $idProgram)->first();
+        return view('organizations.create')->with(['entity' => $entity,'item' => $item, 'program' => $program]);
     }
 
     /**
@@ -42,15 +44,16 @@ class OrganizationController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(OrganizationRequest $request, $idEntity, $idItemExpediture)
+    public function store(OrganizationRequest $request, $idEntity, $idItemExpediture,$idProgram)
     {
         $inputs = $request->all();
         $entity = Entity::findOrFail($idEntity);
         $item = $entity->itemExpeditures()->where('id', $idItemExpediture)->first();
+        $program = $item->programs()->where('id', $idProgram)->first();
         $organization = new Organization($inputs); 
-        $item->organizations()->save($organization);
+        $program->organizations()->save($organization);
         flash('Organización creada correctamente', 'success');
-        return redirect(route('propio_pymes.entidades.objetos.organismos.show', [$entity->id, $item->id, $organization->id]));
+        return redirect(route('propio_pymes.entidades.objetos.programas.organismos.show', [$entity->id, $item->id, $program->id,$organization->id]));
     }
 
     /**
@@ -59,12 +62,13 @@ class OrganizationController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($idEntity, $idItemExpediture, $id)
+    public function show($idEntity, $idItemExpediture, $idProgram, $id)
     {
         $entity = Entity::findOrFail($idEntity);
         $item = $entity->itemExpeditures()->where('id', $idItemExpediture)->first();
-        $organization = $item->organizations()->where('id', $id)->first();
-        return view('organizations.show')->with(['entity' => $entity,'item' => $item, 'organization'=>$organization]);
+        $program = $item->programs()->where('id', $idProgram)->first();
+        $organization = $program->organizations()->where('id', $id)->first();
+        return view('organizations.show')->with(['entity' => $entity,'item' => $item, 'program' => $program,'organization'=>$organization]);
     }
 
     /**
@@ -73,12 +77,13 @@ class OrganizationController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($idEntity, $idItemExpediture, $id)
+    public function edit($idEntity, $idItemExpediture, $idProgram, $id)
     {
         $entity = Entity::findOrFail($idEntity);
         $item = $entity->itemExpeditures()->where('id', $idItemExpediture)->first();
-        $organization = $item->organizations()->where('id', $id)->first();
-        return view('organizations.edit')->with(['entity' => $entity,'item' => $item, 'organization'=>$organization]);
+        $program = $item->programs()->where('id', $idProgram)->first();
+        $organization = $program->organizations()->where('id', $id)->first();
+        return view('organizations.edit')->with(['entity' => $entity,'item' => $item, 'program'=>$program,'organization'=>$organization]);
     }
 
     /**
@@ -88,15 +93,16 @@ class OrganizationController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(OrganizationRequest $request, $idEntity, $idItemExpediture, $id)
+    public function update(OrganizationRequest $request, $idEntity, $idItemExpediture, $idProgram,$id)
     {
         $inputs = $request->all();
         $entity = Entity::findOrFail($idEntity);
         $item = $entity->itemExpeditures()->where('id', $idItemExpediture)->first();
-        $organization = $item->organizations()->where('id', $id)->first(); 
+        $program = $item->programs()->where('id', $idProgram)->first();
+        $organization = $program->organizations()->where('id', $id)->first(); 
         $organization->update($inputs);
         flash('Organización actualizada correctamente', 'success');
-        return redirect(route('propio_pymes.entidades.objetos.organismos.show', [$entity->id, $item->id, $organization->id]));
+        return redirect(route('propio_pymes.entidades.objetos.programas.organismos.show', [$entity->id, $item->id, $program->id,$organization->id]));
     }
 
     /**
@@ -105,13 +111,14 @@ class OrganizationController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($idEntity,$idItemExpediture, $id)
+    public function destroy($idEntity,$idItemExpediture, $idProgram, $id)
     {
         $entity = Entity::findOrFail($idEntity);
         $item = $entity->itemExpeditures()->where('id', $idItemExpediture)->first();
-        $organization = $item->organizations()->where('id', $id)->first(); 
+        $program = $item->programs()->where('id', $idProgram)->first();
+        $organization = $program->organizations()->where('id', $id)->first(); 
         $organization->delete();
         flash('Organización borrada correctamente', 'success');
-        return redirect(route('propio_pymes.entidades.objetos.organismos.index', [$entity->id, $item->id]));
+        return redirect(route('propio_pymes.entidades.objetos.programas.organismos.index', [$entity->id, $item->id, $program->id]));
     }
 }

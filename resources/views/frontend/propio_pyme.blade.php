@@ -4,12 +4,13 @@
       <div class="col-lg-12">
         <h1 class="tittle-section amarillo"><strong>Propio Pyme</strong></h1>
       </div>
-      <div class="col-md-6 col-md-offset-3">
+      <div class="col-md-8 col-md-offset-2">
         <ul id="progressbar">
           <li class="active first">Tama&ntilde;o de empresa</li>
           <li class="second">Objeto del cr&eacute;dito</li>
           <li class="third">Programas</li>
-          <li class="last">Organismo</li>
+          <li class="fourth">Organismo</li>
+          <li class="last">Resultado</li>
         </ul>
         <div class="panel panel-default current">
           <div class="panel-body">

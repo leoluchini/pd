@@ -13,8 +13,8 @@ class ItemExpediture extends Model
         return  $this->belongsTo('App\Entity');
     }
     
-    public function organizations()
+    public function programs()
     {
-        return $this->hasMany('App\Organization');
+        return $this->hasMany('App\Program');
     }
 }

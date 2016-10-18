@@ -6,7 +6,7 @@
       <div class="page-header">
         <div class='btn-toolbar pull-right'>
         <div class='btn-group'>
-          <a href="{{ route('propio_pymes.entidades.objetos.organismos.index', [$entity->id, $item->id])}}" class='btn btn-primary'  data-toggle="tooltip" data-placement="top" title="Volver"><span class="glyphicon glyphicon-chevron-left"></span></a>
+          <a href="{{ route('propio_pymes.entidades.objetos.programas.organismos.index', [$entity->id, $item->id,$program->id])}}" class='btn btn-primary'  data-toggle="tooltip" data-placement="top" title="Volver"><span class="glyphicon glyphicon-chevron-left"></span></a>
         </div>
       </div>
         <h3>Organismo "{{ $organization->name }}" </h3>

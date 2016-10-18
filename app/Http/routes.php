@@ -13,7 +13,7 @@
 
 	
 Route::get('/', ['as' => '/', 'uses' => 'FrontendController@index']);
-Route::get('propio-pymes/{id}/{object?}/{program?}', ['as' => 'propio_pyme', 'uses' => 'PropioPymeController@index']);
+Route::get('propio-pymes/{id}/{object?}/{program?}/{organization?}', ['as' => 'propio_pyme', 'uses' => 'PropioPymeController@index']);
 Route::post('servicios/{id}/suscribirse', [ 'as' => 'servicios.suscribe' , 'uses' => 'ServiceController@suscribe'] );
 
 Route::auth();
@@ -31,7 +31,8 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::group(['prefix' => 'propio_pymes'], function() {
 		Route::resource('entidades', 'EntityController');
 		Route::resource('entidades.objetos', 'ItemExpeditureController');
-		Route::resource('entidades.objetos.organismos', 'OrganizationController');
+		Route::resource('entidades.objetos.programas', 'ProgramController');
+		Route::resource('entidades.objetos.programas.organismos', 'OrganizationController');
   });
 	
   Route::get('perfil', [ 'as' => 'perfil' , 'uses' => 'ProfileController@edit' ] );

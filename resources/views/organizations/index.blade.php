@@ -15,7 +15,7 @@
   </div>
   <div class="row">
     <div class="col-md-12">
-    <a href="{{ route('propio_pymes.entidades.objetos.organismos.create', [$entity->id, $item->id])}}" class="btn btn-primary pull-right">Crear Organismo</a>
+    <a href="{{ route('propio_pymes.entidades.objetos.programas.organismos.create', [$entity->id, $item->id, $program->id])}}" class="btn btn-primary pull-right">Crear Organismo</a>
     </div>
 		<div class="col-md-12">
 			<table class="table">
@@ -30,9 +30,9 @@
             	<tr>
             		<td>{!! $organization->name !!}</td>
             		<td>
-                  <a class="btn btn-link btn-xs" data-toggle="tooltip" data-placement="top" title="Ver más" href="{{ route('propio_pymes.entidades.objetos.organismos.show', [$entity->id, $item->id, $organization->id])}}"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a>
-                  <a class="btn btn-link btn-xs" data-toggle="tooltip" data-placement="top" title="Editar" href="{{ route('propio_pymes.entidades.objetos.organismos.edit', [$entity->id, $item->id, $organization->id])}}"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>
-                  <a class="btn btn-link btn-xs confirm-delete" data-toggle="tooltip" data-placement="top" title="Borrar" href="{{ route('propio_pymes.entidades.objetos.organismos.destroy', [$entity->id, $item->id, $organization->id])}}"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a>
+                  <a class="btn btn-link btn-xs" data-toggle="tooltip" data-placement="top" title="Ver más" href="{{ route('propio_pymes.entidades.objetos.programas.organismos.show', [$entity->id, $item->id,$program->id, $organization->id])}}"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a>
+                  <a class="btn btn-link btn-xs" data-toggle="tooltip" data-placement="top" title="Editar" href="{{ route('propio_pymes.entidades.objetos.programas.organismos.edit', [$entity->id, $item->id, $program->id,$organization->id])}}"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>
+                  <a class="btn btn-link btn-xs confirm-delete" data-toggle="tooltip" data-placement="top" title="Borrar" href="{{ route('propio_pymes.entidades.objetos.programas.organismos.destroy', [$entity->id, $item->id, $program->id,$organization->id])}}"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a>
                 </td>
             	</tr>
             @endforeach

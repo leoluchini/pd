@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateOrganizationsTable extends Migration
+class CreateProgramsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,13 +12,11 @@ class CreateOrganizationsTable extends Migration
      */
     public function up()
     {
-        Schema::create('organizations', function (Blueprint $table) {
+        Schema::create('programs', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
-            $table->longText('description');
-            $table->longText('benefit_amount_term');
-            $table->integer('program_id')->unsigned();
-            $table->foreign('program_id')->references('id')->on('programs')->onDelete('cascade');
+            $table->integer('item_expediture_id')->unsigned();
+            $table->foreign('item_expediture_id')->references('id')->on('item_expeditures')->onDelete('cascade');
             $table->timestamps();
         });
     }
@@ -30,6 +28,6 @@ class CreateOrganizationsTable extends Migration
      */
     public function down()
     {
-        Schema::drop('organizations');
+        Schema::drop('programs');
     }
 }
