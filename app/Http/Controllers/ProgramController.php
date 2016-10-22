@@ -50,7 +50,7 @@ class ProgramController extends Controller
         $program = new Program($inputs); 
         $item->programs()->save($program);
         flash('Programa creado correctamente', 'success');
-        return redirect(route('propio_pymes.entidades.objetos.programas.organismos.index', [$entity->id, $item->id, $program->id]));
+        return redirect(route('propio_pymes.entidades.objetos.programas.index', [$entity->id, $item->id]));
     }
 
     /**
