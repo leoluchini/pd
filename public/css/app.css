@@ -333,6 +333,9 @@ a.skype:hover{
     color: white;
 }
 
+li.propio-pyme{
+    cursor: pointer;
+}
 /* Extra small devices (phones, less than 768px) */
 /* No media query since this is the default in Bootstrap */
 
