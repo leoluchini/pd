@@ -2,7 +2,7 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-12">
-        <h1 class="tittle-section amarillo"><strong>Propio Pyme</strong></h1>
+        <h1 class="tittle-section amarillo"><strong>Cepre Pyme</strong></h1>
       </div>
       <div class="col-md-8 col-md-offset-2">
         <ul id="progressbar">

@@ -100,7 +100,7 @@
                       <a class="page-scroll" href="#page-top"></a>
                       <a class="page-scroll" href="#about">Quienes Somos</a>
                       <a class="page-scroll" href="#services">Servicios</a>
-                      <a class="page-scroll" href="#plan">PropioPYME</a>
+                      <a class="page-scroll" href="#plan">Cepres PYME</a>
                       <a class="page-scroll" href="#staff">Equipo</a>
                       <a class="page-scroll" href="#indicators">Indicadores</a>
                       <a class="page-scroll" href="#clients">Clientes</a>

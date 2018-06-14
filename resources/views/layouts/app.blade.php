@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/jpg" href="{{ asset('images/favicon.png')}}"/>
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>Propio Marte</title>
-    
-    <meta name="description" content="Propio Marte somos una empresa joven que brinda servicios profesionales de excelencia, buscando siempre satisfacer de la mejor forma las necesidades de nuestros clientes. Nos destacamos en el análisis y evaluación global, sectorial y microeconómica. Brindamos información y proyecciones sobre la situación económica mundial, nacional y local, definiendo los escenarios alternativos posibles.">
-    <meta name="keywords" content="propio pyme,Industria,producción,empleo,inflación,inversión,proyecciones,finanzas,empresas,PyMEs,agroindustria,desarrollo,mercado de trabajo,indicadores,financiamiento, Comercio exterior,consultora económica">
+    <title>Cepres</title>
+
+    <meta name="description" content="Cepres somos una empresa joven que brinda servicios profesionales de excelencia, buscando siempre satisfacer de la mejor forma las necesidades de nuestros clientes. Nos destacamos en el análisis y evaluación global, sectorial y microeconómica. Brindamos información y proyecciones sobre la situación económica mundial, nacional y local, definiendo los escenarios alternativos posibles.">
+    <meta name="keywords" content="pyme,Industria,producción,empleo,inflación,inversión,proyecciones,finanzas,empresas,PyMEs,agroindustria,desarrollo,mercado de trabajo,indicadores,financiamiento, Comercio exterior,consultora económica">
     <meta NAME="revisit-after" content="14 days">
     <meta NAME="robots" content="index,follow">
     <meta NAME="distribution" content="global">
@@ -31,7 +31,7 @@
 </head>
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
     @include('layouts.navbar-frontend')
-    
+
     @yield('content')
 
     <!-- JavaScripts -->
@@ -39,7 +39,7 @@
     <!-- jQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js" integrity="sha384-I6F5OKECLVtK/BL+8iSLDEHowSAfUo76ZL9+kGAgTRdiByINKJaqTPH/QVNS1VDb" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
-    
+
     <!-- Bootstrap Core JavaScript -->
     {!! Html::script('bootstrap/js/bootstrap.js') !!}
 

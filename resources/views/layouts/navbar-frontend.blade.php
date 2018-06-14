@@ -12,7 +12,7 @@
                 <div class="row">
                     <div class="col-xs-12">
                         {{ HTML::image('images/logo.png', 'pm', array('height' => '30')) }}
-                        {{ HTML::image('images/cepres.png', 'propio marte', array('class' => "logo",'height' => '20')) }}
+                        {{ HTML::image('images/cepres.png', 'cepres', array('class' => "logo",'height' => '20')) }}
                     </div>
                 </div>
             </a>
@@ -33,7 +33,7 @@
                         <a class="page-scroll" href="#services">Servicios</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#plan">PropioPYME</a>
+                        <a class="page-scroll" href="#plan">Cepre PYME</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#staff">Equipo</a>

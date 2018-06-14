@@ -34,7 +34,7 @@
                             <a class="page-scroll" href="{{ route('servicios.index') }}">Servicios</a>
                         </li>
                         <li class="{{ in_array($currentPath, ['propio_pymes.entidades.index','propio_pymes.entidades.create','propio_pymes.entidades.edit','propio_pymes.entidades.objetos.index','propio_pymes.entidades.objetos.create','propio_pymes.entidades.objetos.edit']) ? 'active' : '' }}">
-                            <a class="page-scroll" href="{{ route('propio_pymes.entidades.index') }}">PropioPYME</a>
+                            <a class="page-scroll" href="{{ route('propio_pymes.entidades.index') }}">Cepre PYME</a>
                         </li>
                         <li class="{{ in_array($currentPath, ['staff.index','staff.create','staff.edit']) ? 'active' : '' }}">
                             <a class="page-scroll" href="{{ route('staff.index') }}">Equipo</a>
@@ -57,7 +57,7 @@
                             <li><a href="{{ url('/logout') }}"><span class="glyphicon glyphicon-log-out"></span> Cerrar sesión</a></li>
                         </ul>
                     </li>
-                    
+
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
