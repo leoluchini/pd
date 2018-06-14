@@ -35,7 +35,7 @@
 
     <!-- Services Section -->
     @include('frontend.services')
-    
+
     <!-- Plan Section -->
     @include('frontend.propio_pyme')
 
@@ -93,7 +93,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                <div class="col-md-6"></div>
+                <div class="col-md-5"></div>
                   <div class="col-md-2">
                     <h4>Secciones</h4>
                     <div class="page-footer">
@@ -118,10 +118,10 @@
                       <a href="#" class="social twitter"><i class="fa fa-btn fa-twitter btn-social"></i></a>
                       </div>
                   </div>
-                  <div class="col-md-2">
+                  <div class="col-md-3">
                     <h4>Contacto</h4>
                       <p class="white">48 n°930 1A</p>
-                      <p class="white">contacto@propiomarte.com</p>
+                      <p class="white">contacto@cepres-ar.com</p>
                   </div>
                 </div>
             </div>
@@ -131,7 +131,7 @@
         <div class="container-fluid">
             <p>
                 {{ Html::image('images/footer.png', 'footer', ['class' => 'footer-img']) }}
-                2016 | Todos los derechos reservados 
+                2016 | Todos los derechos reservados
             </p>
         </div>
     </section>

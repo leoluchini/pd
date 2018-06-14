@@ -4,7 +4,7 @@
       {{ Html::image($cover_page->image, $cover_page->title) }}
       <div class="container">
         <div class="carousel-caption">
-            {{ HTML::image('images/pm-white.png', 'pm', array('height' => '80')) }}
+            {{ HTML::image('images/cepres-white.png', 'pm', array('height' => '80')) }}
             <h1>{!! $cover_page->title !!}</h1>
             <p>{!! $cover_page->description!!}</p>
         </div>
